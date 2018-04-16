@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb89b465-4ca8-431b-b4ec-9731d9e39356" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Demo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch01/cmd.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch01/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch02/ch01.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch02/classpath/CompositeEntry.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch02/classpath/DirEntry.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch02/classpath/Entry.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch02/classpath/WildcardEntry.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch02/classpath/ZipEntry.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch02/cmd.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch02/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch02/classpath/WildcardEntry.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch02/classpath/WildcardEntry.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -87,10 +76,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompositeEntry.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CompositeEntry.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ch02/classpath/CompositeEntry.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
+            <state relative-caret-position="-160">
               <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
               <folding>
                 <element signature="e#19#59#0" expanded="true" />
@@ -108,11 +97,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WildcardEntry.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WildcardEntry.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ch02/classpath/WildcardEntry.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="17" selection-start-column="17" selection-end-column="17" />
+            <state relative-caret-position="247">
+              <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+              <folding>
+                <element signature="e#19#48#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -156,10 +148,10 @@
         <option value="$PROJECT_DIR$/ch01/cmd.go" />
         <option value="$PROJECT_DIR$/ch01/main.go" />
         <option value="$PROJECT_DIR$/ch02/classpath/DirEntry.go" />
-        <option value="$PROJECT_DIR$/ch02/classpath/WildcardEntry.go" />
         <option value="$PROJECT_DIR$/ch02/classpath/ZipEntry.go" />
         <option value="$PROJECT_DIR$/ch02/classpath/Entry.go" />
         <option value="$PROJECT_DIR$/ch02/classpath/CompositeEntry.go" />
+        <option value="$PROJECT_DIR$/ch02/classpath/WildcardEntry.go" />
       </list>
     </option>
   </component>
@@ -270,10 +262,20 @@
       <filePath value="$PROJECT_DIR$/" />
     </configuration>
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32913166" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Database" />
@@ -282,7 +284,7 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.32913166" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32913166" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32913166" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -328,13 +330,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch02/classpath/WildcardEntry.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -384,10 +379,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ch02/classpath/CompositeEntry.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
+        <state relative-caret-position="-160">
           <caret line="9" column="29" lean-forward="true" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding>
             <element signature="e#19#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch02/classpath/WildcardEntry.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
+          <folding>
+            <element signature="e#19#48#0" expanded="true" />
           </folding>
         </state>
       </provider>
