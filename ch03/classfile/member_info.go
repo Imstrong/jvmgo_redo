@@ -8,14 +8,14 @@ type AttrMethodInfo struct {
 }
 func readMembers(reader *ClassReader,cp ConstantPool) []*AttrMethodInfo {
 	memberCount:=reader.readUint16()
-	members:=make([]*MemberInfo,memberCount)
+	members:=make([]*AttrMethodInfo,memberCount)
 	for i:=range members {
 		members[i]=readMember(reader,cp)
 	}
 	return members
 }
-func readMember(reader *ClassReader,cp ConstantPool) *MemberInfo {
-	return &MemberInfo{
+func readMember(reader *ClassReader,cp ConstantPool) *AttrMethodInfo {
+	return &AttrMethodInfo{
 		cp:cp,
 		accessFlags:reader.readUint16(),
 		nameIndex:reader.readUint16(),
@@ -23,10 +23,10 @@ func readMember(reader *ClassReader,cp ConstantPool) *MemberInfo {
 		attributes:readAttributes(reader,cp),
 	}
 }
-func (self *MemberInfo) Name() string {
+func (self *AttrMethodInfo) Name() string {
 	return self.cp.getUtf8(self.nameIndex)
 }
-func (self *MemberInfo) Descriptor() string {
+func (self *AttrMethodInfo) Descriptor() string {
 	return self.cp.getUtf8(self.descriptorIndex)
 }
 

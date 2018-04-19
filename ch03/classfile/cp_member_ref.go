@@ -14,3 +14,13 @@ func (self *ConstantMemberRefInfo) ClassName() string {
 func (self *ConstantMemberRefInfo) NameAndDescriptor() (string,string) {
 	return self.cp.getNameAndType(self.nameAndTypeIndex)
 }
+
+type ConstantFieldrefInfo struct {
+	ConstantMemberRefInfo
+}
+type ConstantMethodrefInfo struct {
+	ConstantMemberRefInfo
+}
+type ConstantInterfaceMethodrefInfo struct {
+	ConstantMemberRefInfo
+}

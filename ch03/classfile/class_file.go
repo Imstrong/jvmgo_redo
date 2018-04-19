@@ -10,9 +10,9 @@ type ClassFile struct {
 	thisClass uint16
 	superClass uint16
 	interfaces []uint16
-	fields []*MemberInfo
-	methods []*MemberInfo
-	attributes []Attribute
+	fields []*AttrMethodInfo
+	methods []*AttrMethodInfo
+	attributes []AttributeInfo
 }
 func Parse(classData []byte) (cf *ClassFile, err error) {
 	defer func() {
@@ -68,15 +68,15 @@ func (self *ClassFile) MajorVersion() uint16 {
 	return self.majorVersion
 } // getter
 func (self *ClassFile) ConstantPool() ConstantPool {
-
+	return self.constantPool
 } // getter
 func (self *ClassFile) AccessFlags() uint16 {
 	return self.accessFlags
 } // getter
-func (self *ClassFile) Fields() []*MemberInfo {
+func (self *ClassFile) Fields() []*AttrMethodInfo {
 	return self.fields
 } // getter
-func (self *ClassFile) Methods() []*MemberInfo {
+func (self *ClassFile) Methods() []*AttrMethodInfo {
 	return self.methods
 } // getter
 func (self *ClassFile) ClassName() string {
