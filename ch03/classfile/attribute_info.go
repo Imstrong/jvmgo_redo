@@ -1,4 +1,5 @@
 package classfile
+
 type AttributeInfo interface {
 	readInfo(reader *ClassReader)
 }
@@ -15,6 +16,7 @@ func readAttribute(reader *ClassReader,constantPool ConstantPool) AttributeInfo 
 	attrName:= constantPool.getUtf8(attrNameIndex)
 	attrLength:=reader.readUint32()
 	attrInfo:=newAttributeInfo(attrName,attrLength,constantPool)
+	attrInfo.readInfo(reader)
 	return attrInfo
 }
 func newAttributeInfo(attrName string,attrLength uint32,constantPool ConstantPool) AttributeInfo{
@@ -32,10 +34,10 @@ func newAttributeInfo(attrName string,attrLength uint32,constantPool ConstantPoo
 	case "LocalVariableTable":
 		return &LocalVariableTableAttribute{}
 	case "SourceFile":
-		return &SourcefileAttribute{}
+		return &SourcefileAttribute{cp:constantPool}
 	case "Synthetic":
 		return &SyntheticAttribute{}
 	default:
-		return &UnparsedAttribute{}
+		return &UnparsedAttribute{attrName,attrLength,nil}
 	}
 }

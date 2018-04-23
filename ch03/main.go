@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"jvmgo_redo/ch03/classpath"
 	"strings"
-	"jvmgo_redo/ch03/classfile"
+	"jvmgo/ch03/classfile"
+	"jvmgo/ch03/classpath"
 )
 
 func main(){
@@ -14,7 +14,6 @@ func main(){
 	} else if cmd.helpFlag {
 		fmt.Print("不会用拉倒")
 	}else {
-		fmt.Printf("enter startJVM...:%v\n",cmd)
 		startJVM(cmd)
 	}
 }

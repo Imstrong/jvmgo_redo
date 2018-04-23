@@ -15,12 +15,16 @@ func readMembers(reader *ClassReader,cp ConstantPool) []*AttrMethodInfo {
 	return members
 }
 func readMember(reader *ClassReader,cp ConstantPool) *AttrMethodInfo {
+	accessFlags:=reader.readUint16()
+	nameIndex:=reader.readUint16()
+	descriptorIndex:=reader.readUint16()
+	attributes:=readAttributes(reader,cp)
 	return &AttrMethodInfo{
 		cp:cp,
-		accessFlags:reader.readUint16(),
-		nameIndex:reader.readUint16(),
-		descriptorIndex:reader.readUint16(),
-		attributes:readAttributes(reader,cp),
+		accessFlags:accessFlags,
+		nameIndex:nameIndex,
+		descriptorIndex:descriptorIndex,
+		attributes:attributes,
 	}
 }
 func (self *AttrMethodInfo) Name() string {
