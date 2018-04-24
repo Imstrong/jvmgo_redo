@@ -5,17 +5,20 @@ type Thread struct {
 	//指向虚拟机栈的引用
 	stack *Stack
 }
-func newThread() *Thread {
+func NewThread() *Thread {
 	//创建Thread实例并指定最大帧数
 	return &Thread{stack:newStack(1024)}
 }
-func(self *Thread) pushFrame(frame *Frame) {
+func(self *Thread) PushFrame(frame *Frame) {
 	self.stack.push(frame)
 }
-func(self *Thread) popFrame() {
-	self.stack.pop()
+func(self *Thread) PopFrame() *Frame{
+	return self.stack.pop()
 }
-func (self *Thread) currentFrame() *Frame{
+func (self *Thread) CurrentFrame() *Frame{
 	return self.stack.top()
 }
 
+func (self *Thread) NewFrame(maxLocals,maxStack uint) *Frame {
+	return NewFrame(self,maxLocals,maxStack)
+}

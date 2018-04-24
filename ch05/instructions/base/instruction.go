@@ -1,6 +1,6 @@
 package base
 
-import "jvmgo_redo/ch05/runtime"
+import "jvmgo/ch05/runtime"
 
 //指令接口，规定字节码指令的基本行为
 type Instruction interface {
@@ -29,4 +29,7 @@ func (self *Index8Instruction) FetchOperands(reader *BytecodeReader) {
 //需要访问常量池的指令，常量池索引为2字节操作数
 type Index16Instruction struct {
 	Index uint
+}
+func (self *Index16Instruction) FetchOperands(reader *BytecodeReader) {
+	self.Index=uint(reader.ReadUint16())
 }

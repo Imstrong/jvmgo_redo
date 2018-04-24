@@ -34,3 +34,12 @@ func (self *AttrMethodInfo) Descriptor() string {
 	return self.cp.getUtf8(self.descriptorIndex)
 }
 
+func (self *AttrMethodInfo) CodeAttribute() *CodeAttribute {
+	for _,attributeInfo:=range self.attributes {
+		switch attributeInfo.(type) {
+		case *CodeAttribute:
+			return attributeInfo.(*CodeAttribute)
+		}
+	}
+	return nil
+}
