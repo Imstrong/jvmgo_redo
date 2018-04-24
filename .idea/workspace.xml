@@ -2,45 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb89b465-4ca8-431b-b4ec-9731d9e39356" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/ch05/instructions/base/branch_logic.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/instructions/comparisons/dcmp.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/instructions/comparisons/fcmp.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/instructions/comparisons/if_icmp.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/instructions/comparisons/ifcond.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/instructions/comparisons/lcmp.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/instructions/conversions/d2x.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/instructions/conversions/f2x.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/instructions/conversions/i2x.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/instructions/conversions/l2x.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/instructions/math/and.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ch05/instructions/math/iinc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch05/instructions/comparisons/if_acmp.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch05/instructions/control/goto.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch05/instructions/control/lookupswitch.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch05/instructions/control/tableswitch.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch05/instructions/extend/wide.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch03/ch03.exe" beforeDir="false" afterPath="$PROJECT_DIR$/ch03/ch03.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch03/classfile/attribute_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch03/classfile/attribute_info.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch03/classfile/member_info.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch03/classfile/member_info.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch03/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch03/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch04/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch04/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch04/runtime/jvm_frame.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch04/runtime/jvm_frame.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch04/runtime/jvm_stack.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch04/runtime/jvm_stack.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch04/runtime/local_vars.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch04/runtime/local_vars.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch04/runtime/object.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch04/runtime/object.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch04/runtime/operand_stack.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch04/runtime/operand_stack.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch04/runtime/slot.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch04/runtime/slot.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch04/runtime/thread.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch04/runtime/thread.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ch05/instructions/base/bytecode_reader.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch05/instructions/base/bytecode_reader.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ch05/instructions/base/instruction.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch05/instructions/base/instruction.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch05/instructions/constants/const.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch05/instructions/constants/const.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch05/instructions/constants/ipush.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch05/instructions/constants/ipush.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch05/instructions/constants/nop.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch05/instructions/constants/nop.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch05/instructions/comparisons/if_icmp.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch05/instructions/comparisons/if_icmp.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch05/instructions/comparisons/ifcond.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch05/instructions/comparisons/ifcond.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ch05/instructions/loads/iload.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch05/instructions/loads/iload.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch05/instructions/math/rem.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch05/instructions/math/rem.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch05/instructions/math/sh.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch05/instructions/math/sh.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch05/instructions/stack/dup.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch05/instructions/stack/dup.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch05/instructions/stack/pop.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch05/instructions/stack/pop.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch05/instructions/stack/swap.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch05/instructions/stack/swap.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch05/instructions/stores/lstore.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch05/instructions/stores/lstore.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch05/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch05/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ch05/runtime/operand_stack.go" beforeDir="false" afterPath="$PROJECT_DIR$/ch05/runtime/operand_stack.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -51,71 +23,92 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="i2x.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ch05/instructions/conversions/i2x.go">
+      <file leaf-file-name="instruction.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ch05/instructions/base/instruction.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+            <state relative-caret-position="-181">
+              <caret line="2" column="32" lean-forward="true" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="if_acmp.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ch05/instructions/comparisons/if_acmp.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
               <folding>
-                <element signature="e#21#85#0" expanded="true" />
+                <element signature="e#21#95#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="f2x.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ch05/instructions/conversions/f2x.go">
+      <file leaf-file-name="goto.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ch05/instructions/control/goto.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+            <state relative-caret-position="209">
+              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
               <folding>
-                <element signature="e#21#85#0" expanded="true" />
+                <element signature="e#17#91#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="l2x.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ch05/instructions/conversions/l2x.go">
+      <file leaf-file-name="tableswitch.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ch05/instructions/control/tableswitch.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
+            <state relative-caret-position="437">
+              <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
               <folding>
-                <element signature="e#21#85#0" expanded="true" />
+                <element signature="e#17#91#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="lcmp.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ch05/instructions/comparisons/lcmp.go">
+      <file leaf-file-name="lookupswitch.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ch05/instructions/control/lookupswitch.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            <state relative-caret-position="218">
+              <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
               <folding>
-                <element signature="e#21#85#0" expanded="true" />
+                <element signature="e#17#91#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fcmp.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ch05/instructions/comparisons/fcmp.go">
+      <file leaf-file-name="wide.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ch05/instructions/extend/wide.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+            <state relative-caret-position="408">
+              <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
               <folding>
-                <element signature="e#21#85#0" expanded="true" />
+                <element signature="e#16#101#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dcmp.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ch05/instructions/comparisons/dcmp.go">
+      <file leaf-file-name="iload.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ch05/instructions/loads/iload.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-322">
-              <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+            <state relative-caret-position="-333">
+              <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="if_icmp.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ch05/instructions/comparisons/if_icmp.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-219">
+              <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+              <folding>
+                <element signature="e#21#85#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,8 +116,8 @@
       <file leaf-file-name="ifcond.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ch05/instructions/comparisons/ifcond.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="19">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
               <folding>
                 <element signature="e#21#85#0" expanded="true" />
               </folding>
@@ -132,29 +125,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="if_icmp.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ch05/instructions/comparisons/if_icmp.go">
+      <file leaf-file-name="bytecode_reader.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ch05/instructions/base/bytecode_reader.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="branch_logic.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ch05/instructions/base/branch_logic.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="instruction.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ch05/instructions/base/instruction.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="13" column="22" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="22" />
+            <state relative-caret-position="446">
+              <caret line="48" column="1" lean-forward="true" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -203,11 +178,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ch02/main.go" />
-        <option value="$PROJECT_DIR$/ch02/classpath/CompositeEntry.go" />
-        <option value="$PROJECT_DIR$/ch03/cmd.go" />
-        <option value="$PROJECT_DIR$/ch03/ClassFileTest.java" />
-        <option value="$PROJECT_DIR$/ch03/classfile/class_reader.go" />
         <option value="$PROJECT_DIR$/ch03/classfile/class_file.go" />
         <option value="$PROJECT_DIR$/ch03/classfile/constant_info.go" />
         <option value="$PROJECT_DIR$/ch03/classfile/constant_pool.go" />
@@ -229,12 +199,9 @@
         <option value="$PROJECT_DIR$/ch04/main.go" />
         <option value="$PROJECT_DIR$/ch04/runtime/operand_stack.go" />
         <option value="$PROJECT_DIR$/ch05/main.go" />
-        <option value="$PROJECT_DIR$/ch05/instructions/base/bytecode_reader.go" />
         <option value="$PROJECT_DIR$/ch05/instructions/constants/const.go" />
         <option value="$PROJECT_DIR$/ch05/instructions/constants/ipush.go" />
         <option value="$PROJECT_DIR$/ch05/instructions/constants/nop.go" />
-        <option value="$PROJECT_DIR$/ch05/instructions/base/instruction.go" />
-        <option value="$PROJECT_DIR$/ch05/instructions/loads/iload.go" />
         <option value="$PROJECT_DIR$/ch05/instructions/stores/lstore.go" />
         <option value="$PROJECT_DIR$/ch05/runtime/operand_stack.go" />
         <option value="$PROJECT_DIR$/ch05/instructions/stack/pop.go" />
@@ -252,8 +219,16 @@
         <option value="$PROJECT_DIR$/ch05/instructions/comparisons/fcmp.go" />
         <option value="$PROJECT_DIR$/ch05/instructions/comparisons/dcmp.go" />
         <option value="$PROJECT_DIR$/ch05/instructions/base/branch_logic.go" />
+        <option value="$PROJECT_DIR$/ch05/instructions/base/instruction.go" />
         <option value="$PROJECT_DIR$/ch05/instructions/comparisons/ifcond.go" />
         <option value="$PROJECT_DIR$/ch05/instructions/comparisons/if_icmp.go" />
+        <option value="$PROJECT_DIR$/ch05/instructions/comparisons/if_acmp.go" />
+        <option value="$PROJECT_DIR$/ch05/instructions/control/goto.go" />
+        <option value="$PROJECT_DIR$/ch05/instructions/base/bytecode_reader.go" />
+        <option value="$PROJECT_DIR$/ch05/instructions/control/tableswitch.go" />
+        <option value="$PROJECT_DIR$/ch05/instructions/control/lookupswitch.go" />
+        <option value="$PROJECT_DIR$/ch05/instructions/loads/iload.go" />
+        <option value="$PROJECT_DIR$/ch05/instructions/extend/wide.go" />
       </list>
     </option>
   </component>
@@ -276,6 +251,7 @@
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
+      <autoscrollToSource ProjectPane="true" />
       <autoscrollFromSource ProjectPane="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
@@ -284,127 +260,54 @@
         <subPane>
           <expand>
             <path>
-              <item name="jvmgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jvmgo" type="462c0819:PsiDirectoryNode" />
+              <item name="jvmgo_redo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jvmgo_redo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="jvmgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jvmgo" type="462c0819:PsiDirectoryNode" />
-              <item name="ch04" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jvmgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jvmgo" type="462c0819:PsiDirectoryNode" />
-              <item name="ch04" type="462c0819:PsiDirectoryNode" />
-              <item name="classpath" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jvmgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jvmgo" type="462c0819:PsiDirectoryNode" />
-              <item name="ch04" type="462c0819:PsiDirectoryNode" />
-              <item name="runtime" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jvmgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jvmgo" type="462c0819:PsiDirectoryNode" />
+              <item name="jvmgo_redo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jvmgo_redo" type="462c0819:PsiDirectoryNode" />
               <item name="ch05" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="jvmgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jvmgo" type="462c0819:PsiDirectoryNode" />
+              <item name="jvmgo_redo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jvmgo_redo" type="462c0819:PsiDirectoryNode" />
               <item name="ch05" type="462c0819:PsiDirectoryNode" />
               <item name="instructions" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="jvmgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jvmgo" type="462c0819:PsiDirectoryNode" />
+              <item name="jvmgo_redo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jvmgo_redo" type="462c0819:PsiDirectoryNode" />
               <item name="ch05" type="462c0819:PsiDirectoryNode" />
               <item name="instructions" type="462c0819:PsiDirectoryNode" />
               <item name="base" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="jvmgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jvmgo" type="462c0819:PsiDirectoryNode" />
+              <item name="jvmgo_redo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jvmgo_redo" type="462c0819:PsiDirectoryNode" />
               <item name="ch05" type="462c0819:PsiDirectoryNode" />
               <item name="instructions" type="462c0819:PsiDirectoryNode" />
               <item name="comparisons" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="jvmgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jvmgo" type="462c0819:PsiDirectoryNode" />
+              <item name="jvmgo_redo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jvmgo_redo" type="462c0819:PsiDirectoryNode" />
               <item name="ch05" type="462c0819:PsiDirectoryNode" />
               <item name="instructions" type="462c0819:PsiDirectoryNode" />
-              <item name="constants" type="462c0819:PsiDirectoryNode" />
+              <item name="control" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="jvmgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jvmgo" type="462c0819:PsiDirectoryNode" />
+              <item name="jvmgo_redo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jvmgo_redo" type="462c0819:PsiDirectoryNode" />
               <item name="ch05" type="462c0819:PsiDirectoryNode" />
               <item name="instructions" type="462c0819:PsiDirectoryNode" />
-              <item name="conversions" type="462c0819:PsiDirectoryNode" />
+              <item name="extend" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="jvmgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jvmgo" type="462c0819:PsiDirectoryNode" />
+              <item name="jvmgo_redo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="jvmgo_redo" type="462c0819:PsiDirectoryNode" />
               <item name="ch05" type="462c0819:PsiDirectoryNode" />
               <item name="instructions" type="462c0819:PsiDirectoryNode" />
               <item name="loads" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jvmgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jvmgo" type="462c0819:PsiDirectoryNode" />
-              <item name="ch05" type="462c0819:PsiDirectoryNode" />
-              <item name="instructions" type="462c0819:PsiDirectoryNode" />
-              <item name="math" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jvmgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jvmgo" type="462c0819:PsiDirectoryNode" />
-              <item name="ch05" type="462c0819:PsiDirectoryNode" />
-              <item name="instructions" type="462c0819:PsiDirectoryNode" />
-              <item name="stack" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jvmgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jvmgo" type="462c0819:PsiDirectoryNode" />
-              <item name="ch05" type="462c0819:PsiDirectoryNode" />
-              <item name="instructions" type="462c0819:PsiDirectoryNode" />
-              <item name="stores" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jvmgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jvmgo" type="462c0819:PsiDirectoryNode" />
-              <item name="ch05" type="462c0819:PsiDirectoryNode" />
-              <item name="runtime" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jvmgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="jvmgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Go SDK 1.9.2" type="20ee2d1f:SyntheticLibraryElementNode" />
-            </path>
-            <path>
-              <item name="jvmgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Go SDK 1.9.2" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jvmgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Go SDK 1.9.2" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="math" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jvmgo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Go SDK 1.9.2" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="runtime" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -415,7 +318,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
-    <property name="SearchEverywhereHistoryKey" value="main&#9;FILE&#9;file://D:/goworkspace/src/jvmgo/ch02/main.go" />
+    <property name="SearchEverywhereHistoryKey" value="byteco&#9;FILE&#9;file://D:/IdeaProjects/goworkspace/src/jvmgo_redo/ch05/instructions/base/bytecode_reader.go&#10;main&#9;FILE&#9;file://D:/goworkspace/src/jvmgo/ch02/main.go" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
     <property name="configurable.Module.GOPATH.is.expanded" value="true" />
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
@@ -483,26 +386,27 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14812332" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1504298" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32913166" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32913166" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32849163" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.25258493" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.25210086" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.31376976" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32913166" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -516,17 +420,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/ch03/classfile/class_file.go</url>
-          <line>41</line>
+          <line>38</line>
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/ch04/main.go</url>
-          <line>52</line>
+          <line>53</line>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DlvLineBreakpoint">
           <url>file://$PROJECT_DIR$/ch04/main.go</url>
-          <line>39</line>
+          <line>40</line>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
@@ -537,41 +441,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ch03/classfile/cp_name_and_type.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch03/classfile/cp_member_ref.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch03/ClassFileTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch02/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch03/classpath/classpath.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="65" column="32" lean-forward="true" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ch03/classfile/constant_info.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -725,30 +594,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ch05/instructions/base/bytecode_reader.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="7" selection-start-column="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch05/instructions/loads/iload.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="39" column="19" lean-forward="true" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
-          <folding>
-            <element signature="e#15#79#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ch05/instructions/stores/lstore.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="552">
           <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
-          <folding>
-            <element signature="e#16#80#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -770,9 +619,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-          <folding>
-            <element signature="e#15#79#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -780,9 +626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-          <folding>
-            <element signature="e#15#79#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -790,9 +633,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="69">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="e#15#79#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -827,121 +667,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ch05/instructions/math/and.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="58" column="12" selection-start-line="58" selection-start-column="12" selection-end-line="58" selection-end-column="12" />
-          <folding>
-            <element signature="e#14#78#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch05/instructions/math/iinc.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding>
-            <element signature="e#14#78#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch05/instructions/conversions/d2x.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#21#85#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch05/instructions/conversions/i2x.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
-          <folding>
-            <element signature="e#21#85#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch05/instructions/conversions/f2x.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-          <folding>
-            <element signature="e#21#85#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch05/instructions/conversions/l2x.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="27" column="21" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-          <folding>
-            <element signature="e#21#85#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch05/instructions/comparisons/lcmp.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding>
-            <element signature="e#21#85#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch05/instructions/comparisons/fcmp.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="33" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-          <folding>
-            <element signature="e#21#85#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch05/instructions/comparisons/dcmp.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-322">
-          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ch05/instructions/math/and.go" />
+    <entry file="file://$PROJECT_DIR$/ch05/instructions/math/iinc.go" />
+    <entry file="file://$PROJECT_DIR$/ch05/instructions/conversions/d2x.go" />
+    <entry file="file://$PROJECT_DIR$/ch05/instructions/conversions/i2x.go" />
+    <entry file="file://$PROJECT_DIR$/ch05/instructions/conversions/f2x.go" />
+    <entry file="file://$PROJECT_DIR$/ch05/instructions/conversions/l2x.go" />
+    <entry file="file://$PROJECT_DIR$/ch05/instructions/comparisons/lcmp.go" />
+    <entry file="file://$PROJECT_DIR$/ch05/instructions/comparisons/fcmp.go" />
+    <entry file="file://$PROJECT_DIR$/ch05/instructions/comparisons/dcmp.go" />
     <entry file="file://$PROJECT_DIR$/ch05/instructions/base/branch_logic.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/ch05/instructions/base/instruction.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ch05/instructions/comparisons/ifcond.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#21#85#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-181">
+          <caret line="2" column="32" lean-forward="true" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ch05/instructions/comparisons/if_icmp.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
+        <state relative-caret-position="-219">
+          <caret line="30" column="12" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+          <folding>
+            <element signature="e#21#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch05/instructions/comparisons/if_acmp.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+          <folding>
+            <element signature="e#21#95#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch05/instructions/control/goto.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding>
+            <element signature="e#17#91#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch05/instructions/base/bytecode_reader.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="48" column="1" lean-forward="true" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch05/instructions/comparisons/ifcond.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="e#21#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch05/instructions/control/tableswitch.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="18" lean-forward="true" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+          <folding>
+            <element signature="e#17#91#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch05/instructions/control/lookupswitch.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="14" column="43" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="43" />
+          <folding>
+            <element signature="e#17#91#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch05/instructions/loads/iload.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-333">
           <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ch05/instructions/extend/wide.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
+          <folding>
+            <element signature="e#16#101#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
