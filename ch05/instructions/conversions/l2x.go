@@ -1,8 +1,8 @@
 package conversions
 
 import (
-	"jvmgo/ch05/instructions/base"
-	"jvmgo/ch04/runtime"
+	"jvmgo_redo/ch05/instructions/base"
+	"jvmgo_redo/ch04/runtime"
 )
 
 //convert long to x
