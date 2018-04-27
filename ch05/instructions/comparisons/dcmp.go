@@ -1,8 +1,8 @@
 package comparisons
 
 import (
-	"jvmgo/ch05/instructions/base"
-	"jvmgo/ch05/runtime"
+	"jvmgo_redo/ch05/instructions/base"
+	"jvmgo_redo/ch05/runtime"
 )
 
 //比较double变量,gflag表示操作数中是否又一个数为NaN

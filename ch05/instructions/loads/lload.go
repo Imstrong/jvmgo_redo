@@ -1,8 +1,8 @@
 package loads
 
 import (
-	"jvmgo/ch05/instructions/base"
-	"jvmgo/ch05/runtime"
+	"jvmgo_redo/ch05/instructions/base"
+	"jvmgo_redo/ch05/runtime"
 )
 
 type LLOAD struct {

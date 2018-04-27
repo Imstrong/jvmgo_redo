@@ -43,3 +43,6 @@ func (self *AttrMethodInfo) CodeAttribute() *CodeAttribute {
 	}
 	return nil
 }
+func (self *AttrMethodInfo) AccessFlags() uint16 {
+	return self.accessFlags
+}
