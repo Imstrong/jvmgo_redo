@@ -1,8 +1,8 @@
 package control
 
 import (
-	"jvmgo/ch05/instructions/base"
-	"jvmgo/ch05/runtime"
+	"jvmgo/ch06/instructions/base"
+	"jvmgo/ch06/runtime"
 )
 
 type TABLE_SWITCH struct {

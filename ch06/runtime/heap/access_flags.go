@@ -1,21 +1,40 @@
 package heap
 const (
+	//访问标识位，共16个
+	//public
 	ACC_PUBLIC=0X0001
+	//private
 	ACC_PRIVATE=0X0002
+	//protected
 	ACC_PROTECTED=0X0004
+	//static
 	ACC_STATIC=0X0008
+	//final
 	ACC_FINAL=0X0010
+	//super,是否允许使用invokespecial字节码指令的新语义
 	ACC_SUPER=0X0020
+	//synchronized，修饰方法
 	ACC_SYNCHRONIZED=0X0020
+	//volatile，修饰字段
 	ACC_VOLATILE=0X0040
+	//bridge
 	ACC_BRIDGE=0X0040
+	//transient
 	ACC_TRANSIENT=0X0080
+	//varargs
 	ACC_VARARGS=0X0080
+	//native
 	ACC_NATIVE=0X0100
+	//interface标识这是一个接口
 	ACC_INTERFACE=0X0200
+	//是否为abstract，对于接口或抽象类为真，其他类为假
 	ACC_ABSTRACT=0X0400
+	//标识方法，表示方法使用FP-strict浮点格式
 	ACC_STRICT=0X0800
+	//标识方法，表示方法在源代码文件中不存在，由编译器产生
 	ACC_SYNTHETIC=0X1000
+	//标识类，注解类型@interface，标注了注解类型必须同时标注接口类型
 	ACC_ANNOTATION=0X2000
+	//标识类或方法，表示枚举类型
 	ACC_ENUM=0X4000
 )

@@ -1,8 +1,8 @@
 package comparisons
 
 import (
-	"jvmgo/ch05/instructions/base"
-	"jvmgo/ch05/runtime"
+	"jvmgo/ch06/instructions/base"
+	"jvmgo/ch06/runtime"
 )
 
 //比较float变量,gflag表示操作数中是否又一个数为NaN

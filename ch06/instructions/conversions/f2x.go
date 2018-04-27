@@ -1,8 +1,8 @@
 package conversions
 
 import (
-	"jvmgo/ch05/instructions/base"
-	"jvmgo/ch05/runtime"
+	"jvmgo/ch06/instructions/base"
+	"jvmgo/ch06/runtime"
 )
 
 //convert float32 to x

@@ -1,11 +1,11 @@
 package main
 
 import (
-	"jvmgo/ch05/classfile"
-	"jvmgo/ch05/runtime"
+	"jvmgo/ch06/classfile"
+	"jvmgo/ch06/runtime"
 	"fmt"
-	"jvmgo/ch05/instructions/base"
-	"jvmgo/ch05/instructions"
+	"jvmgo/ch06/instructions/base"
+	"jvmgo/ch06/instructions"
 )
 
 func interpret(methodInfo *classfile.AttrMethodInfo) {

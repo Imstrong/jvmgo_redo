@@ -1,8 +1,8 @@
 package constants
 
 import (
-	"jvmgo_redo/ch05/instructions/base"
-	"jvmgo_redo/ch05/runtime"
+	"jvmgo/ch06/instructions/base"
+	"jvmgo/ch06/runtime"
 )
 
 //no operation

@@ -1,8 +1,8 @@
 package math
 
 import (
-	"jvmgo_redo/ch05/instructions/base"
-	"jvmgo_redo/ch05/runtime"
+	"jvmgo/ch05/instructions/base"
+	"jvmgo/ch05/runtime"
 )
 
 type ISUB struct {

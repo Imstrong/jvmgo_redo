@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"jvmgo_redo/ch02/classpath"
+	"jvmgo/ch02/classpath"
 	"strings"
 )
 

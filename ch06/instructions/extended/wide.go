@@ -1,11 +1,11 @@
 package extended
 
 import (
-	"jvmgo/ch05/instructions/base"
-	"jvmgo/ch05/instructions/loads"
-	"jvmgo/ch05/instructions/math"
-	"jvmgo/ch05/runtime"
-	"jvmgo/ch05/instructions/stores"
+	"jvmgo/ch06/instructions/base"
+	"jvmgo/ch06/instructions/loads"
+	"jvmgo/ch06/instructions/math"
+	"jvmgo/ch06/runtime"
+	"jvmgo/ch06/instructions/stores"
 )
 
 type WIDE struct {

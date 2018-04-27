@@ -1,8 +1,8 @@
 package comparisons
 
 import (
-	"jvmgo/ch05/instructions/base"
-	"jvmgo/ch05/runtime"
+	"jvmgo/ch06/instructions/base"
+	"jvmgo/ch06/runtime"
 )
 //和0做比较
 //if equals to zero
