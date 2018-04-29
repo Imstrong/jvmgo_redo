@@ -1,8 +1,8 @@
 package extended
 
 import (
-	"jvmgo/ch06/instructions/base"
-	"jvmgo/ch06/runtime"
+	"jvmgo_redo/ch06/instructions/base"
+	"jvmgo_redo/ch06/runtime"
 )
 
 //根据引用该是否null进行跳转

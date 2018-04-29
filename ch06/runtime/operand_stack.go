@@ -1,6 +1,9 @@
 package runtime
 
-import "math"
+import (
+	"math"
+	"jvmgo_redo/ch06/runtime/heap"
+)
 
 //操作数栈
 type OperandStack struct {
@@ -52,11 +55,11 @@ func (self *OperandStack) PopDouble() float64 {
 	val:=self.PopLong()
 	return math.Float64frombits(uint64(val))
 }
-func (self *OperandStack) PushRef(ref *Object) {
+func (self *OperandStack) PushRef(ref *heap.Object) {
 	self.slots[self.size].ref=ref
 	self.size++
 }
-func (self *OperandStack) PopRef() *Object {
+func (self *OperandStack) PopRef() *heap.Object {
 	self.size--
 	ref:=self.slots[self.size].ref
 	//将该引用置为空，方便回收

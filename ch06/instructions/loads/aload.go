@@ -1,8 +1,8 @@
 package loads
 
 import (
-	"jvmgo/ch06/instructions/base"
-	"jvmgo/ch06/runtime"
+	"jvmgo_redo/ch06/instructions/base"
+	"jvmgo_redo/ch06/runtime"
 )
 func _aload(frame *runtime.Frame,index uint) {
 	val := frame.LocalVars().GetRef(index)

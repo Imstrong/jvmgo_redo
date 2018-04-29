@@ -43,3 +43,15 @@ func (self *AttrMethodInfo) CodeAttribute() *CodeAttribute {
 	}
 	return nil
 }
+func (self *AttrMethodInfo) ConstantValueIndex() *ConstantValueAttribute {
+	for _,attrInfo:=range self.attributes {
+		switch attrInfo.(type) {
+		case *ConstantValueAttribute:
+			return attrInfo.(*ConstantValueAttribute)
+		}
+	}
+	return nil
+}
+func (self *AttrMethodInfo) AccessFlags() uint16 {
+	return self.accessFlags
+}

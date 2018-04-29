@@ -2,6 +2,7 @@ package heap
 
 import (
 	"jvmgo/ch06/classfile"
+	"strings"
 )
 
 type Class struct {
@@ -19,7 +20,7 @@ type Class struct {
 	interfaces        []*Class
 	instanceSlotCount uint
 	staticSlotCount   uint
-	staticVars        *Slots
+	staticVars        Slots
 }
 
 func newClass(classfile *classfile.ClassFile) *Class {
@@ -58,4 +59,28 @@ func (self *Class) IsAnnotation() bool {
 }
 func (self *Class) IsEnum() bool {
 	return 0 != self.accessFlags&ACC_ENUM
+}
+func (self *Class) isAccessibleTo(other *Class) bool {
+	return self.IsPublic()||self.getPackageName()==other.getPackageName()
+}
+func (self *Class) getPackageName() string {
+	if i:=strings.LastIndex(self.name,"/");i>=0 {
+		return self.name[:i]
+	}
+	return ""
+}
+func (self *Class) isSubClassOf(d *Class) bool {
+
+}
+func (self *Class) NewObject() *Object {
+	return newObject(self)
+}
+func newObject(class *Class) *Object {
+	return &Object{
+		class:class,
+		fields:newSlots(class.instanceSlotCount),
+	}
+}
+func (self *Class) ConstantPool() *ConstantPool {
+	return self.constantPool
 }

@@ -1,4 +1,8 @@
 package runtime
+
+import "jvmgo_redo/ch06/runtime/heap"
+
+//jvm栈帧
 type Frame struct {
 	//下一帧的指针
 	lower *Frame
@@ -7,6 +11,7 @@ type Frame struct {
 	//	操作数栈指针
 	operandStack *OperandStack
 	thread *Thread
+	method *heap.Method
 	nextPC int
 }
 func NewFrame(thread *Thread,maxLocals,maxStack uint) *Frame {
@@ -32,5 +37,7 @@ func (self Frame) NextPC() int {
 func (self Frame) SetNextPC(pc int) {
 	self.nextPC=pc
 }
-
+func (self Frame) Method() *heap.Method{
+	return self.method
+}
 
