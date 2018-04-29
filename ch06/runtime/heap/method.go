@@ -29,3 +29,12 @@ func (self *Method) copyAttributes(methodMember *classfile.AttrMethodInfo) {
 func (self *Method) Class() *Class {
 	return self.class
 }
+func (self *Method) MaxLocals() uint {
+	return self.maxLocals
+}
+func (self *Method) MaxStack() uint{
+	return self.maxStack
+}
+func (self *Method) Code() []byte {
+	return self.code
+}

@@ -1,23 +1,19 @@
 package main
 
 import (
-	"jvmgo_redo/ch06/classfile"
-	"jvmgo_redo/ch06/runtime"
+	"jvmgo/ch06/runtime"
 	"fmt"
-	"jvmgo_redo/ch06/instructions/base"
-	"jvmgo_redo/ch06/instructions"
+	"jvmgo/ch06/instructions/base"
+	"jvmgo/ch06/instructions"
+	"jvmgo/ch06/runtime/heap"
 )
 
-func interpret(methodInfo *classfile.AttrMethodInfo) {
-	codeAttr:=methodInfo.CodeAttribute()
-	maxLocals:=codeAttr.MaxLocals()
-	maxStack:=codeAttr.MaxStack()
-	bytecode:=codeAttr.Code()
-	thread:=runtime.NewThread()
-	frame:=thread.NewFrame(maxLocals,maxStack)
+func interpret(method *heap.Method) {
+	thread := runtime.NewThread()
+	frame := thread.NewFrame(method)
 	thread.PushFrame(frame)
 	defer catchErr(frame)
-	loop(thread,bytecode)
+	loop(thread, method.Code())
 }
 func catchErr(frame *runtime.Frame) {
 	if r:=recover();r!=nil {

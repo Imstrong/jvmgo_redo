@@ -5,3 +5,6 @@ type Object struct{
 	//实例变量
 	fields Slots
 }
+func (self *Object) IsInstanceOf(class *Class) bool {
+	return class.isAssignableFrom(self.class)
+}

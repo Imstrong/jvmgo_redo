@@ -9,8 +9,8 @@ type ConstantPool struct {
 	class  *Class
 	consts []Constant
 }
-type Constant interface{}
-
+type Constant interface{
+}
 func (self *ConstantPool) GetConstant(index uint) Constant {
 	if c := self.consts[index]; c != nil {
 		return c

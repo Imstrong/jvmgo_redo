@@ -1,4 +1,7 @@
 package runtime
+
+import "jvmgo/ch06/runtime/heap"
+
 type Thread struct {
 	//pc寄存器，保存当前字节码指令行号
 	pc int
@@ -19,8 +22,8 @@ func (self *Thread) CurrentFrame() *Frame{
 	return self.stack.top()
 }
 
-func (self *Thread) NewFrame(maxLocals,maxStack uint) *Frame {
-	return NewFrame(self,maxLocals,maxStack)
+func (self *Thread) NewFrame(method *heap.Method) *Frame {
+	return NewFrame(self,method)
 }
 func (self *Thread) SetPC(pc int) {
 	self.pc=pc
