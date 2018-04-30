@@ -1,6 +1,6 @@
 package heap
 
-import "jvmgo/ch06/classfile"
+import "jvmgo_redo/ch06/classfile"
 
 type FieldRef struct {
 	MemberRef
@@ -21,7 +21,7 @@ func (self *FieldRef) ResolvedFiles() *Field {
 func (self *FieldRef) resolveFieldRef() {
 	d:=self.cp.class
 	c:=self.ResolvedClass()
-	field:=lookupField(c,self.name,self.descriptor)
+	field:=self.lookupField(c,self.name,self.descriptor)
 	if field==nil {
 		panic("java.lang.NoSuchFieldError")
 	}
@@ -37,12 +37,18 @@ func (self *FieldRef) lookupField(c *Class,name,descriptor string) *Field {
 		}
 	}
 	for _,iface:=range c.interfaces {
-		if field:=lookupField(iface,name,descriptor);field!=nil {
+		if field:=self.lookupField(iface,name,descriptor);field!=nil {
 			return field
 		}
 	}
 	if c.superClass!=nil {
-		return lookupField(c.superClass,name,descriptor)
+		return self.lookupField(c.superClass,name,descriptor)
 	}
 	return nil
+}
+func (self *Field) IsFinal() bool {
+	if self.accessFlags&ACC_FINAL!=0 {
+		return true
+	}
+	return false
 }

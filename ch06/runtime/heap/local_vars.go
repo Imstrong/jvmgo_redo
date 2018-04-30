@@ -2,6 +2,7 @@ package heap
 
 import "math"
 
+//局部变量表，由局部变量的单元slot组成
 type LocalVars []Slot
 func newLocalVars (maxLocals uint) LocalVars {
 	if maxLocals>0 {

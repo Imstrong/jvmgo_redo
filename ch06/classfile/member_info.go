@@ -43,11 +43,11 @@ func (self *AttrMethodInfo) CodeAttribute() *CodeAttribute {
 	}
 	return nil
 }
-func (self *AttrMethodInfo) ConstantValueIndex() *ConstantValueAttribute {
+func (self *AttrMethodInfo) ConstantValueIndex() *ConstantValueAttr {
 	for _,attrInfo:=range self.attributes {
 		switch attrInfo.(type) {
-		case *ConstantValueAttribute:
-			return attrInfo.(*ConstantValueAttribute)
+		case *ConstantValueAttr:
+			return attrInfo.(*ConstantValueAttr)
 		}
 	}
 	return nil

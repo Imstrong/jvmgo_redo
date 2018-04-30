@@ -1,6 +1,6 @@
 package heap
 
-import "jvmgo/ch06/classfile"
+import "jvmgo_redo/ch06/classfile"
 
 type Field struct {
 	slotId uint
@@ -21,7 +21,16 @@ func (self *Field) isLongOrDouble() bool {
 	return self.descriptor=="J"||self.descriptor=="D"
 }
 func (self *Field) copyAttributes(cfField *classfile.AttrMethodInfo) {
-	if valAttr:=cfField.ConstantValueAttribute();valAttr!=nil {
+	if valAttr:=cfField.ConstantValueIndex();valAttr!=nil {
 		self.constValueIndex=uint(valAttr.ConstantValueIndex())
 	}
+}
+func (self *Field) ConstantValueIndex() uint {
+	return self.constValueIndex
+}
+func (self *Field) IsStatic() bool {
+	if self.accessFlags&ACC_STATIC!=0 {
+		return true
+	}
+	return false
 }

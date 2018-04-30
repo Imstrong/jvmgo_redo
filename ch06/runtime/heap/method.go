@@ -1,6 +1,6 @@
 package heap
 
-import "jvmgo/ch06/classfile"
+import "jvmgo_redo/ch06/classfile"
 
 type Method struct {
 	ClassMember
@@ -37,4 +37,10 @@ func (self *Method) MaxStack() uint{
 }
 func (self *Method) Code() []byte {
 	return self.code
+}
+func (self *Method) IsStatic() bool {
+	if self.accessFlags&ACC_STATIC!=0 {
+		return true
+	}
+	return false
 }

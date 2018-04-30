@@ -1,6 +1,6 @@
 package heap
 
-import "jvmgo/ch06/classfile"
+import "jvmgo_redo/ch06/classfile"
 
 type ClassMember struct {
 	accessFlags uint16
@@ -28,11 +28,23 @@ func (self *ClassMember) isAccessibleTo(d *Class) bool {
 	return d==c
 }
 func (self *ClassMember) IsPublic() bool {
-
+	if self.accessFlags&ACC_PUBLIC!=0 {
+		return true
+	}
+	return false
 }
 func (self *ClassMember) IsProtected() bool {
-
+	if self.accessFlags&ACC_PROTECTED!=0 {
+		return true
+	}
+	return false
 }
 func (self *ClassMember) IsPrivate() bool {
-
+	if self.accessFlags&ACC_PRIVATE!=0 {
+		return true
+	}
+	return false
+}
+func (self *ClassMember) Descriptor() string {
+	return self.descriptor
 }

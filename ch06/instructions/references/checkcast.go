@@ -1,9 +1,9 @@
 package references
 
 import (
-	"jvmgo/ch06/instructions/base"
-	"jvmgo/ch06/runtime"
-	"jvmgo/ch06/runtime/heap"
+	"jvmgo_redo/ch06/instructions/base"
+	"jvmgo_redo/ch06/runtime"
+	"jvmgo_redo/ch06/runtime/heap"
 )
 
 type CHECK_CAST struct {base.Index16Instruction}

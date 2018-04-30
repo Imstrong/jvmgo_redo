@@ -2,7 +2,7 @@ package heap
 
 import "math"
 
-//Slots表示局部变量表，局部变量可以为数字类型，因此会有一个属性是空的（0）
+//Slots表示局部变量表的一个单元，局部变量可以为数字类型，因此存在会有一个属性是空的（0）
 //go不允许包互相依赖，即a依赖b的同时b依赖a
 type Slot struct {
 	num int32
