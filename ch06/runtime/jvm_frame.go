@@ -1,6 +1,6 @@
 package runtime
 
-import "jvmgo_redo/ch06/runtime/heap"
+import "jvmgo/ch06/runtime/heap"
 
 //jvm栈帧
 type Frame struct {

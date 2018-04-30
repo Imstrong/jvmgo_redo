@@ -1,9 +1,9 @@
 package references
 
 import (
-	"jvmgo_redo/ch06/instructions/base"
-	"jvmgo_redo/ch06/runtime"
-	"jvmgo_redo/ch06/runtime/heap"
+	"jvmgo/ch06/instructions/base"
+	"jvmgo/ch06/runtime"
+	"jvmgo/ch06/runtime/heap"
 )
 
 //解析静态字段
