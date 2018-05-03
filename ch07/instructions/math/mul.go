@@ -1,8 +1,8 @@
 package math
 
 import (
-	"jvmgo_redo/ch06/instructions/base"
-	"jvmgo_redo/ch06/runtime"
+	"jvmgo/ch07/instructions/base"
+	"jvmgo/ch07/runtime"
 )
 
 type IMUL struct {

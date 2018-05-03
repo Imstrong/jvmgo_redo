@@ -2,9 +2,9 @@ package references
 
 import (
 	"fmt"
-	"jvmgo_redo/ch06/instructions/base"
-	"jvmgo_redo/ch06/runtime"
-	"jvmgo_redo/ch06/runtime/heap"
+	"jvmgo/ch07/instructions/base"
+	"jvmgo/ch07/runtime"
+	"jvmgo/ch07/runtime/heap"
 )
 
 type INVOKE_VIRTUAL struct{ base.Index16Instruction }
