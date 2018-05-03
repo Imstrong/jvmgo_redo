@@ -1,8 +1,8 @@
 package math
 
 import (
-	"jvmgo/ch06/instructions/base"
-	"jvmgo/ch06/runtime"
+	"jvmgo_redo/ch06/instructions/base"
+	"jvmgo_redo/ch06/runtime"
 )
 
 //位移指令，按int，long|left，right组合成六种情况

@@ -1,7 +1,7 @@
 package heap
 
 import (
-	"jvmgo_redo/ch05/classfile"
+	"jvmgo_redo_redo/ch05/classfile"
 )
 
 type Class struct {

@@ -4,7 +4,7 @@ package loads
 //	val := frame.LocalVars().GetInt(index)
 //	frame.OperandStack().PushInt(val)
 //}
-////加载jvmgo变量表获取变量，推入操作数栈顶
+////加载jvmgo_redo变量表获取变量，推入操作数栈顶
 //type ILOAD struct {
 //	base.Index8Instruction
 //}

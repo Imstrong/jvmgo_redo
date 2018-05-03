@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 	"strings"
-	"jvmgo/ch06/classpath"
-	"jvmgo/ch06/classfile"
+	"jvmgo_redo/ch06/classpath"
+	"jvmgo_redo/ch06/classfile"
 )
 
 func main(){

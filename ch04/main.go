@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"jvmgo/ch04/runtime"
+	"jvmgo_redo/ch04/runtime"
 )
 
 func main(){
