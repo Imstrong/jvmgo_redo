@@ -2,6 +2,7 @@ package heap
 
 import "jvmgo/ch07/classfile"
 
+//类符号引用，继承符号引用结构
 type ClassRef struct {
 	SymRef
 }

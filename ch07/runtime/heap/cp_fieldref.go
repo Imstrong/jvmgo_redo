@@ -1,7 +1,7 @@
 package heap
 
 import "jvmgo/ch07/classfile"
-
+//成员变量标识符
 type FieldRef struct {
 	MemberRef
 	field *Field
