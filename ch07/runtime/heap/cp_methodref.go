@@ -47,6 +47,7 @@ func lookupMethod(c *Class,name,descriptor string) *Method{
 	return method
 }
 func LookupMethodInClass(class *Class,name,descriptor string) *Method {
+	//c=class执行一次，如果在本类中找到匹配的方法，返回；否则在父类中查找
 	for c:=class;c!=nil;c=c.superClass {
 		for _,method:=range c.methods {
 			if method.name==name&&method.descriptor==descriptor {

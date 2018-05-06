@@ -14,3 +14,6 @@ func (object *Object) Fields() Slots {
 func (object *Object) IsInstanceof(class *Class) bool {
 	return class.isAssignableFrom(object.class)
 }
+func (object *Object) Class() *Class {
+	return object.class
+}

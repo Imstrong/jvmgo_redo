@@ -132,3 +132,26 @@ func (self *Class) getStaticMethod(name,descriptor string) *Method {
 func (self *Class) StaticVars() Slots {
 	return self.staticVars
 }
+func (self *Class) IsSuperClassOf(class *Class) bool {
+	if class.superClass==self {
+		return true
+	}
+	return false
+}
+func (self *Class) GetPackageName() string {
+	if i:=strings.LastIndex(self.name,"/");i>0 {
+		return self.name[:i]
+	}
+	return ""
+}
+func (self *Class) IsSubClassOf(class *Class) bool {
+	for c:=self.superClass;c!=nil;c=c.superClass {
+		if c==class {
+			return true
+		}
+	}
+	return false
+}
+func (self *Class) SuperClass() *Class {
+	return self.superClass
+}

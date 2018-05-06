@@ -8,6 +8,7 @@ type Method struct {
 	maxLocals uint
 	code []byte
 	class *Class
+	argSlotCount uint
 }
 func newMethods(class *Class,methodMembers []*classfile.AttrMethodInfo) []*Method{
 	methods:=make([]*Method,len(methodMembers))
@@ -16,6 +17,7 @@ func newMethods(class *Class,methodMembers []*classfile.AttrMethodInfo) []*Metho
 		methods[i].class=class
 		methods[i].copyMemberInfo(method)
 		methods[i].copyAttributes(method)
+		methods[i].countArgSlotCount()
 	}
 	return methods
 }
@@ -46,4 +48,25 @@ func (self *Method) IsStatic() bool {
 }
 func (self *Method) Name() string {
 	return self.name
+}
+func (self *Method) ArgSlotCount() uint {
+	return self.argSlotCount
+}
+func (self *Method) countArgSlotCount() {
+	parsedDescriptor:=parseMethodDescriptor(self.descriptor)
+	for _,paramType:=range parsedDescriptor.parameterTypes {
+		self.argSlotCount++
+		if paramType=="J"||paramType=="D" {
+			self.argSlotCount++
+		}
+		if !self.IsStatic() {
+			self.argSlotCount++
+		}
+	}
+}
+func (self *Method) IsAbstract() bool {
+	if self.accessFlags&ACC_ABSTRACT!=0 {
+		return true
+	}
+	return false
 }
