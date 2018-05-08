@@ -155,3 +155,16 @@ func (self *Class) IsSubClassOf(class *Class) bool {
 func (self *Class) SuperClass() *Class {
 	return self.superClass
 }
+func (self *Class) IsImplements(class *Class) bool {
+	for i:=self;i!=nil;i=i.superClass {
+		for _, iFace := range self.interfaces {
+			if iFace == class||iFace.isSubInterfaceOf(class) {
+				return true
+			}
+		}
+	}
+	return false
+}
+func (self *Class) Name() string {
+	return self.name
+}

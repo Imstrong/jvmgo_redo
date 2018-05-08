@@ -31,6 +31,6 @@ func (self *Thread) SetPC(pc int) {
 func (self *Thread) PC() int {
 	return self.pc
 }
-func (self *Thread) TopFrame() *Frame {
-	return self.stack.top()
+func (self *Thread) IsStackEmpty() bool {
+	return self.stack.IsEmpty()
 }
