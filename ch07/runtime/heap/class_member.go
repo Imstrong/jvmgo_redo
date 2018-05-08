@@ -25,7 +25,8 @@ func (self *ClassMember) isAccessibleTo(d *Class) bool {
 	if !self.IsPrivate() {
 		return c.getPackageName()==d.getPackageName()
 	}
-	return d==c
+	b:= d==c
+	return b
 }
 func (self *ClassMember) IsPublic() bool {
 	if self.accessFlags&ACC_PUBLIC!=0 {

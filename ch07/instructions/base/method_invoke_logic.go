@@ -3,6 +3,7 @@ package base
 import (
 	"jvmgo/ch07/runtime"
 	"jvmgo/ch07/runtime/heap"
+	"fmt"
 )
 
 //方法执行逻辑
@@ -18,6 +19,15 @@ func InvokeMethod(invokerFrame *runtime.Frame,method *heap.Method) {
 		for i:=argSlot-1;i>=0;i-- {
 			slot:=invokerFrame.OperandStack().PopSlot()
 			newFrame.LocalVars().SetSlot(uint(i),slot)
+		}
+	}
+	// hack!
+	if method.IsNative() {
+		if method.Name() == "registerNatives" {
+			thread.PopFrame()
+		} else {
+			panic(fmt.Sprintf("native method: %v.%v%v\n",
+				method.Class().Name(), method.Name(), method.Descriptor()))
 		}
 	}
 }

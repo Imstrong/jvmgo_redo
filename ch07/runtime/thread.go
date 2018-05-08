@@ -34,3 +34,6 @@ func (self *Thread) PC() int {
 func (self *Thread) IsStackEmpty() bool {
 	return self.stack.IsEmpty()
 }
+func (self *Thread) TopFrame() *Frame {
+	return self.stack._top
+}

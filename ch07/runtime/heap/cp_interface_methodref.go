@@ -1,6 +1,8 @@
 package heap
 
-import "jvmgo/ch07/classfile"
+import (
+	"jvmgo/ch07/classfile"
+)
 
 type InterfaceMethodRef struct {
 	MemberRef
@@ -32,4 +34,16 @@ func (self *InterfaceMethodRef) resolveInterfaceMethodRef()  {
 		panic("java.lang.IllegalAccessError")
 	}
 	self.method=method
+}
+func lookupInterfaceMethod(c *Class,methodName,descriptor string) *Method{
+	for _,method:=range c.methods {
+		if methodName==method.Name()&&descriptor==method.Descriptor() {
+			return method
+		}
+	}
+	method:= lookupMethodInInterfaces(c.interfaces,methodName,descriptor)
+	if method!=nil {
+		return method
+	}
+	return nil
 }

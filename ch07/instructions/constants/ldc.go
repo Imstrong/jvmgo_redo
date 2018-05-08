@@ -25,7 +25,8 @@ func _ldc(frame *runtime.Frame, index uint) {
 		stack.PushInt(c.(int32))
 	case float32:
 		stack.PushFloat(c.(float32))
-		// case string: 在第
+		//case string: //在第
+		//stack.PushRef(c.(*heap.SymRef))
 		// case *heap.ClassRef: 在第
 	default:
 		panic("todo: ldc!")
