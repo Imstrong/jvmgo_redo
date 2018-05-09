@@ -3,7 +3,6 @@ package classpath
 import (
 	"path/filepath"
 	"os"
-	"fmt"
 )
 
 type Classpath struct{
@@ -26,10 +25,10 @@ func Parse(jreOption,classpathOption string) *Classpath {
 func (self *Classpath) ParseCpAndExtendClasspath(jreOption string) {
 	jreDir:=getJreDir(jreOption)
 	jreLibPath:=filepath.Join(jreDir,"lib","*")
-	fmt.Printf("jre path is : %s\n",jreLibPath)
+	//fmt.Printf("jre path is : %s\n",jreLibPath)
 	self.bootClasspath=newWildcardEntry(jreLibPath)//基础类路径
 	extLibPath:=filepath.Join(jreDir,"lib","ext","*")
-	fmt.Printf("extend path is : %s\n",extLibPath)
+	//fmt.Printf("extend path is : %s\n",extLibPath)
 	self.extendClasspath=newWildcardEntry(extLibPath)
 }
 //根据用户输入的jreOption获得基础类路径
@@ -41,7 +40,7 @@ func getJreDir(jreOption string) string {
 		return "./jre"
 	}
 	if jh := os.Getenv("JAVA_HOME");jh!= "" {
-		fmt.Printf("JAVA_HOME:%s\n",jh)
+		//fmt.Printf("JAVA_HOME:%s\n",jh)
 		return filepath.Join(jh,"jre")
 	}
 	panic("Can not find jre folder")

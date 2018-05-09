@@ -1,8 +1,8 @@
 package math
 
 import (
-	"jvmgo/ch07/instructions/base"
-	"jvmgo/ch07/runtime"
+	"jvmgo_redo/ch07/instructions/base"
+	"jvmgo_redo/ch07/runtime"
 )
 
 //给局部变量表中的int变量增加常量值，局部变量表的索引和常量值都由操作数提供

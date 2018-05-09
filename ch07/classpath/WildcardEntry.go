@@ -4,7 +4,6 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
-	"fmt"
 )
 
 func newWildcardEntry(path string) CompositeEntry {
@@ -21,7 +20,7 @@ func newWildcardEntry(path string) CompositeEntry {
 		}
 		//如果根目录下文件为jar文件，创建ZipEntry并放到CompositeEntry中
 		if strings.HasSuffix(path,".jar")||strings.HasSuffix(path,".JAR") {
-			fmt.Printf("scanning jar file : %s\n",path)
+			//fmt.Printf("scanning jar file : %s\n",path)
 			jarEntry:=newZipEntry(path)
 			compositeEntry=append(compositeEntry,jarEntry)
 		}
@@ -29,6 +28,6 @@ func newWildcardEntry(path string) CompositeEntry {
 	}
 	//walk方法对一个树形结构目录的每个节点调用walkFn方法，如果是文件夹，则跳过；如果是jar文件，就创建Entry对象并放入CompositeEntry中
 	filepath.Walk(baseDir,walkFn)
-	fmt.Printf("entries: %v\n",compositeEntry)
+	//fmt.Printf("entries: %v\n",compositeEntry)
 	return compositeEntry
 }

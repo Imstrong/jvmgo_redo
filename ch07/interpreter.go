@@ -1,11 +1,11 @@
 package main
 
 import (
-	"jvmgo/ch07/runtime"
+	"jvmgo_redo/ch07/runtime"
 	"fmt"
-	"jvmgo/ch07/runtime/heap"
-	"jvmgo/ch07/instructions/base"
-	"jvmgo/ch07/instructions"
+	"jvmgo_redo/ch07/runtime/heap"
+	"jvmgo_redo/ch07/instructions/base"
+	"jvmgo_redo/ch07/instructions"
 )
 
 func interpret(method *heap.Method,logInst bool) {

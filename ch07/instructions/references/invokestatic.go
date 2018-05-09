@@ -1,9 +1,9 @@
 package references
 
 import (
-	"jvmgo/ch07/instructions/base"
-	"jvmgo/ch07/runtime"
-	"jvmgo/ch07/runtime/heap"
+	"jvmgo_redo/ch07/instructions/base"
+	"jvmgo_redo/ch07/runtime"
+	"jvmgo_redo/ch07/runtime/heap"
 )
 //base.Index16Instruction为带常量池索引的指令
 type INVOKE_STATIC struct{base.Index16Instruction}
@@ -14,5 +14,12 @@ func (self *INVOKE_STATIC) Execute(frame *runtime.Frame) {
 	if !resolvedMethod.IsStatic() {
 		panic("java.lang.IncompatibleClassChangeExeption")
 	}
-	base.InvokeMethod(frame,resolvedMethod)
+	class := resolvedMethod.Class()
+	if !class.InitStarted() {
+		frame.RevertNextPC()
+		base.InitClass(frame.Thread(), class)
+		return
+	}
+
+	base.InvokeMethod(frame, resolvedMethod)
 }

@@ -1,9 +1,9 @@
 package references
 
 import (
-	"jvmgo/ch07/instructions/base"
-	"jvmgo/ch07/runtime"
-	"jvmgo/ch07/runtime/heap"
+	"jvmgo_redo/ch07/instructions/base"
+	"jvmgo_redo/ch07/runtime"
+	"jvmgo_redo/ch07/runtime/heap"
 )
 
 type INVOKE_SPECIAL struct{ base.Index16Instruction }

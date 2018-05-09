@@ -13,6 +13,7 @@ import (
 	. "jvmgo_redo/ch06/instructions/extended"
 	. "jvmgo_redo/ch06/instructions/math"
 	"jvmgo_redo/ch06/instructions/references"
+	"jvmgo_redo/ch07/instructions/control"
 )
 
 // NoOperandsInstruction singletons
@@ -154,12 +155,12 @@ var (
 	fcmpg   = &FCMPG{}
 	dcmpl   = &DCMPL{}
 	dcmpg   = &DCMPG{}
-	// ireturn = &IRETURN{}
-	// lreturn = &LRETURN{}
-	// freturn = &FRETURN{}
-	// dreturn = &DRETURN{}
-	// areturn = &ARETURN{}
-	//_return = &references.RETURN{}
+	ireturn = &control.IRETURN{}
+	lreturn = &control.LRETURN{}
+	freturn = &control.FRETURN{}
+	dreturn = &control.DRETURN{}
+	areturn = &control.ARETURN{}
+	_return = &control.RETURN{}
 	// arraylength   = &ARRAY_LENGTH{}
 	// athrow        = &ATHROW{}
 	// monitorenter  = &MONITOR_ENTER{}
@@ -513,16 +514,16 @@ func NewInstruction(opcode byte) base.Instruction {
 		return &TABLE_SWITCH{}
 	case 0xab:
 		return &LOOKUP_SWITCH{}
-	//case 0xac:
-	//	return ireturn
-	//case 0xad:
-	//	return lreturn
-	//case 0xae:
-	//	return freturn
-	//case 0xaf:
-	//	return dreturn
-	//case 0xb0:
-	//	return areturn
+	case 0xac:
+		return ireturn
+	case 0xad:
+		return lreturn
+	case 0xae:
+		return freturn
+	case 0xaf:
+		return dreturn
+	case 0xb0:
+		return areturn
 	case 0xb1:
 		return _return
 	case 0xb2:

@@ -1,18 +1,18 @@
 package instructions
 
 import (
-	"jvmgo/ch07/instructions/base"
 	"fmt"
-	. "jvmgo/ch07/instructions/constants"
-	. "jvmgo/ch07/instructions/loads"
-	. "jvmgo/ch07/instructions/stores"
-	. "jvmgo/ch07/instructions/stack"
-	. "jvmgo/ch07/instructions/comparisons"
-	. "jvmgo/ch07/instructions/control"
-	. "jvmgo/ch07/instructions/conversions"
-	. "jvmgo/ch07/instructions/extended"
-	. "jvmgo/ch07/instructions/math"
-	"jvmgo/ch07/instructions/references"
+	"jvmgo_redo/ch07/instructions/base"
+	. "jvmgo_redo/ch07/instructions/constants"
+	. "jvmgo_redo/ch07/instructions/loads"
+	. "jvmgo_redo/ch07/instructions/stores"
+	. "jvmgo_redo/ch07/instructions/stack"
+	. "jvmgo_redo/ch07/instructions/comparisons"
+	. "jvmgo_redo/ch07/instructions/control"
+	. "jvmgo_redo/ch07/instructions/conversions"
+	. "jvmgo_redo/ch07/instructions/extended"
+	. "jvmgo_redo/ch07/instructions/math"
+	"jvmgo_redo/ch07/instructions/references"
 )
 
 // NoOperandsInstruction singletons
@@ -154,11 +154,11 @@ var (
 	fcmpg   = &FCMPG{}
 	dcmpl   = &DCMPL{}
 	dcmpg   = &DCMPG{}
-	// ireturn = &IRETURN{}
-	// lreturn = &LRETURN{}
-	// freturn = &FRETURN{}
-	// dreturn = &DRETURN{}
-	// areturn = &ARETURN{}
+	ireturn = &IRETURN{}
+	lreturn = &LRETURN{}
+	freturn = &FRETURN{}
+	dreturn = &DRETURN{}
+	areturn = &ARETURN{}
 	_return = &RETURN{}
 	// arraylength   = &ARRAY_LENGTH{}
 	// athrow        = &ATHROW{}
@@ -327,22 +327,22 @@ func NewInstruction(opcode byte) base.Instruction {
 		return astore_2
 	case 0x4e:
 		return astore_3
-	//case 0x4f:
-	//	return iastore
-	//case 0x50:
-	//	return lastore
-	//case 0x51:
-	//	return fastore
-	//case 0x52:
-	//	return dastore
-	//case 0x53:
-	//	return aastore
-	//case 0x54:
-	//	return bastore
-	//case 0x55:
-	//	return castore
-	//case 0x56:
-	//	return sastore
+		//case 0x4f:
+		//	return iastore
+		//case 0x50:
+		//	return lastore
+		//case 0x51:
+		//	return fastore
+		//case 0x52:
+		//	return dastore
+		//case 0x53:
+		//	return aastore
+		//case 0x54:
+		//	return bastore
+		//case 0x55:
+		//	return castore
+		//case 0x56:
+		//	return sastore
 	case 0x57:
 		return pop
 	case 0x58:
@@ -513,16 +513,16 @@ func NewInstruction(opcode byte) base.Instruction {
 		return &TABLE_SWITCH{}
 	case 0xab:
 		return &LOOKUP_SWITCH{}
-	//case 0xac:
-	//	return ireturn
-	//case 0xad:
-	//	return lreturn
-	//case 0xae:
-	//	return freturn
-	//case 0xaf:
-	//	return dreturn
-	//case 0xb0:
-	//	return areturn
+	case 0xac:
+		return ireturn
+	case 0xad:
+		return lreturn
+	case 0xae:
+		return freturn
+	case 0xaf:
+		return dreturn
+	case 0xb0:
+		return areturn
 	case 0xb1:
 		return _return
 	case 0xb2:
@@ -541,26 +541,26 @@ func NewInstruction(opcode byte) base.Instruction {
 		return &references.INVOKE_STATIC{}
 	case 0xb9:
 		return &references.INVOKE_INTERFACE{}
-	//case 0xba:
-	//	return &INVOKE_DYNAMIC{}
+		//case 0xba:
+		//	return &INVOKE_DYNAMIC{}
 	case 0xbb:
 		return &references.NEW{}
-	//case 0xbc:
-	//	return &NEW_ARRAY{}
-	//case 0xbd:
-	//	return &ANEW_ARRAY{}
-	//case 0xbe:
-	//	return arraylength
-	//case 0xbf:
-	//	return athrow
+		//case 0xbc:
+		//	return &NEW_ARRAY{}
+		//case 0xbd:
+		//	return &ANEW_ARRAY{}
+		//case 0xbe:
+		//	return arraylength
+		//case 0xbf:
+		//	return athrow
 	case 0xc0:
 		return &references.CHECK_CAST{}
 	case 0xc1:
 		return &references.INSTANCE_OF{}
-	//case 0xc2:
-	//	return monitorenter
-	//case 0xc3:
-	//	return monitorexit
+		//case 0xc2:
+		//	return monitorenter
+		//case 0xc3:
+		//	return monitorexit
 	case 0xc4:
 		return &WIDE{}
 		// case 0xc5:

@@ -1,7 +1,7 @@
 package heap
 
 import (
-	"jvmgo/ch07/classfile"
+	"jvmgo_redo/ch07/classfile"
 )
 
 type InterfaceMethodRef struct {

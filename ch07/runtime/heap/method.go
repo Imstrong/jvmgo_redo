@@ -1,13 +1,12 @@
 package heap
 
-import "jvmgo/ch07/classfile"
+import "jvmgo_redo/ch07/classfile"
 
 type Method struct {
 	ClassMember
 	maxStack     uint
 	maxLocals    uint
 	code         []byte
-	class        *Class
 	argSlotCount uint
 }
 

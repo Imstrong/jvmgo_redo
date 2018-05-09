@@ -1,6 +1,6 @@
 package runtime
 
-import "jvmgo/ch07/runtime/heap"
+import "jvmgo_redo/ch07/runtime/heap"
 
 type Thread struct {
 	//pc寄存器，保存当前字节码指令行号

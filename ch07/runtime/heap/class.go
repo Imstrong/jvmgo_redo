@@ -1,7 +1,7 @@
 package heap
 
 import (
-	"jvmgo/ch07/classfile"
+	"jvmgo_redo/ch07/classfile"
 	"strings"
 )
 
@@ -21,6 +21,7 @@ type Class struct {
 	instanceSlotCount uint
 	staticSlotCount   uint
 	staticVars        Slots
+	initStarted 	  bool
 }
 
 func newClass(classfile *classfile.ClassFile) *Class {
@@ -167,4 +168,18 @@ func (self *Class) IsImplements(class *Class) bool {
 }
 func (self *Class) Name() string {
 	return self.name
+}
+func (class *Class) InitStarted() bool{
+	return class.initStarted
+}
+func (class *Class) GetClinitMethod() *Method {
+	for _,method:=range class.methods {
+		if method.Name()=="<clinit>" {
+			return method
+		}
+	}
+	return nil
+}
+func (self *Class) StartInit() {
+	self.initStarted=true
 }

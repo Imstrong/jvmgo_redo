@@ -1,7 +1,7 @@
 package runtime
 
 import (
-	"jvmgo/ch07/runtime/heap"
+	"jvmgo_redo/ch07/runtime/heap"
 )
 
 //jvm栈帧
@@ -49,4 +49,7 @@ func newFrame(thread *Thread, method *heap.Method) *Frame {
 		localVars: newLocalVars(method.MaxLocals()),
 		operandStack: newOperandStack(method.MaxStack()),
 	}
+}
+func (self *Frame) RevertNextPC() {
+	self.nextPC=self.thread.pc
 }
