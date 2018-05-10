@@ -1,7 +1,7 @@
 package heap
 
 import (
-	"jvmgo_redo/ch07/classfile"
+	"jvmgo/ch07/classfile"
 	"strings"
 )
 
@@ -173,12 +173,7 @@ func (class *Class) InitStarted() bool{
 	return class.initStarted
 }
 func (class *Class) GetClinitMethod() *Method {
-	for _,method:=range class.methods {
-		if method.Name()=="<clinit>" {
-			return method
-		}
-	}
-	return nil
+	return class.getStaticMethod("<clinit>","()V")
 }
 func (self *Class) StartInit() {
 	self.initStarted=true
