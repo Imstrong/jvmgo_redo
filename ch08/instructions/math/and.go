@@ -1,8 +1,8 @@
 package math
 
 import (
-	"jvmgo/ch07/instructions/base"
-	"jvmgo/ch07/runtime"
+	"jvmgo/ch08/instructions/base"
+	"jvmgo/ch08/runtime"
 )
 
 //布尔运算指令，有按位与、按位或、按位异或三种，且只能操作int、long两种类型，因此组合成六种

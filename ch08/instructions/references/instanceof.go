@@ -1,9 +1,9 @@
 package references
 
 import (
-	"jvmgo/ch07/instructions/base"
-	"jvmgo/ch07/runtime"
-	"jvmgo/ch07/runtime/heap"
+	"jvmgo/ch08/instructions/base"
+	"jvmgo/ch08/runtime"
+	"jvmgo/ch08/runtime/heap"
 )
 
 type INSTANCE_OF struct {

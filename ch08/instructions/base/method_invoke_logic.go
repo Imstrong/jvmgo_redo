@@ -1,8 +1,8 @@
 package base
 
 import (
-	"jvmgo/ch07/runtime"
-	"jvmgo/ch07/runtime/heap"
+	"jvmgo/ch08/runtime"
+	"jvmgo/ch08/runtime/heap"
 	"fmt"
 )
 

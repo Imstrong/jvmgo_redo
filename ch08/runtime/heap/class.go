@@ -1,7 +1,7 @@
 package heap
 
 import (
-	"jvmgo/ch07/classfile"
+	"jvmgo/ch08/classfile"
 	"strings"
 )
 
@@ -177,4 +177,15 @@ func (class *Class) GetClinitMethod() *Method {
 }
 func (self *Class) StartInit() {
 	self.initStarted=true
+}
+func (self *Class) ClassLoader() *ClassLoader {
+	return self.loader
+}
+func (self *Class) ArrayClass() *Class {
+	arrayClassName:=getArrayClassName(self.name)
+	return self.loader.LoadClass(arrayClassName)
+}
+func (self *Class) ComponentClass() *Class {
+	componentClassName:=getComponentClassName(self.name)
+	return self.loader.LoadClass(componentClassName)
 }

@@ -1,7 +1,7 @@
 package runtime
 
 import (
-	"jvmgo/ch07/runtime/heap"
+	"jvmgo/ch08/runtime/heap"
 )
 
 //jvm栈帧

@@ -1,7 +1,7 @@
 package base
 
-import "jvmgo/ch07/runtime"
-import "jvmgo/ch07/runtime/heap"
+import "jvmgo/ch08/runtime"
+import "jvmgo/ch08/runtime/heap"
 
 // jvms 5.5
 func InitClass(thread *runtime.Thread, class *heap.Class) {

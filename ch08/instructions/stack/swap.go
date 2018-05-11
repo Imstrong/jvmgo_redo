@@ -1,8 +1,8 @@
 package stack
 
 import (
-	"jvmgo/ch07/instructions/base"
-	"jvmgo/ch07/runtime"
+	"jvmgo/ch08/instructions/base"
+	"jvmgo/ch08/runtime"
 )
 //将栈顶两个变量交换位置
 type SWAP struct {

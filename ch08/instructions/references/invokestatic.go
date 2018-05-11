@@ -1,9 +1,9 @@
 package references
 
 import (
-	"jvmgo/ch07/instructions/base"
-	"jvmgo/ch07/runtime"
-	"jvmgo/ch07/runtime/heap"
+	"jvmgo/ch08/instructions/base"
+	"jvmgo/ch08/runtime"
+	"jvmgo/ch08/runtime/heap"
 )
 //base.Index16Instruction为带常量池索引的指令
 type INVOKE_STATIC struct{base.Index16Instruction}

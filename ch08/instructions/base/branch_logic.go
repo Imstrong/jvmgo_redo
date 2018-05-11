@@ -1,6 +1,6 @@
 package base
 
-import "jvmgo/ch07/runtime"
+import "jvmgo/ch08/runtime"
 
 func Branch(frame *runtime.Frame,offset int){
 	pc:=frame.Thread().PC()

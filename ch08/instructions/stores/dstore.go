@@ -1,8 +1,8 @@
 package stores
 
 import (
-	"jvmgo/ch07/instructions/base"
-	"jvmgo/ch07/runtime"
+	"jvmgo/ch08/instructions/base"
+	"jvmgo/ch08/runtime"
 )
 
 //存储指令从操作数栈弹出变量，并存入局部变量表

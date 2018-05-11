@@ -1,6 +1,6 @@
 package heap
 
-import "jvmgo/ch07/classfile"
+import "jvmgo/ch08/classfile"
 
 type Field struct {
 	//标识该字段在字段表中的位置，字段表为一个[]*Slot，该值在计算字段个数时设置

@@ -1,6 +1,6 @@
 package base
 
-import "jvmgo/ch07/runtime"
+import "jvmgo/ch08/runtime"
 
 //指令接口，规定字节码指令的基本行为
 type Instruction interface {

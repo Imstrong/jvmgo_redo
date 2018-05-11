@@ -2,17 +2,17 @@ package instructions
 
 import (
 	"fmt"
-	"jvmgo/ch07/instructions/base"
-	. "jvmgo/ch07/instructions/constants"
-	. "jvmgo/ch07/instructions/loads"
-	. "jvmgo/ch07/instructions/stores"
-	. "jvmgo/ch07/instructions/stack"
-	. "jvmgo/ch07/instructions/comparisons"
-	. "jvmgo/ch07/instructions/control"
-	. "jvmgo/ch07/instructions/conversions"
-	. "jvmgo/ch07/instructions/extended"
-	. "jvmgo/ch07/instructions/math"
-	"jvmgo/ch07/instructions/references"
+	"jvmgo/ch08/instructions/base"
+	. "jvmgo/ch08/instructions/constants"
+	. "jvmgo/ch08/instructions/loads"
+	. "jvmgo/ch08/instructions/stores"
+	. "jvmgo/ch08/instructions/stack"
+	. "jvmgo/ch08/instructions/comparisons"
+	. "jvmgo/ch08/instructions/control"
+	. "jvmgo/ch08/instructions/conversions"
+	. "jvmgo/ch08/instructions/extended"
+	. "jvmgo/ch08/instructions/math"
+	"jvmgo/ch08/instructions/references"
 )
 
 // NoOperandsInstruction singletons

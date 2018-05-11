@@ -1,37 +1,35 @@
 package loads
 
-//func _iload(frame *runtime.Frame,index uint) {
-//	val := frame.LocalVars().GetInt(index)
-//	frame.OperandStack().PushInt(val)
-//}
-////加载jvmgo_redo变量表获取变量，推入操作数栈顶
-//type ILOAD struct {
-//	base.Index8Instruction
-//}
-//func (self *ILOAD) Execute(frame *runtime.Frame) {
-//	_iload(frame,self.Index)
-//}
-//type ILOAD_0 struct {
-//	base.NoOperandsInstruction
-//}
-//func (self *ILOAD_0) Execute(frame *runtime.Frame) {
-//	_iload(frame,0)
-//}
-//type ILOAD_1 struct {
-//	base.NoOperandsInstruction
-//}
-//func (self *ILOAD_1) Execute(frame *runtime.Frame) {
-//	_iload(frame,1)
-//}
-//type ILOAD_2 struct {
-//	base.NoOperandsInstruction
-//}
-//func (self *ILOAD_2) Execute(frame *runtime.Frame) {
-//	_iload(frame,2)
-//}
-//type ILOAD_3 struct {
-//	base.NoOperandsInstruction
-//}
-//func (self *ILOAD_3) Execute(frame *runtime.Frame) {
-//	_iload(frame,3)
-//}
+import (
+	"jvmgo/ch08/instructions/base"
+	"jvmgo/ch08/runtime"
+	"jvmgo/ch08/runtime/heap"
+)
+
+type AALOAD struct {base.NoOperandsInstruction}
+type BALOAD struct {base.NoOperandsInstruction}
+type CALOAD struct {base.NoOperandsInstruction}
+type DALOAD struct {base.NoOperandsInstruction}
+type FALOAD struct {base.NoOperandsInstruction}
+type IALOAD struct {base.NoOperandsInstruction}
+type LALOAD struct {base.NoOperandsInstruction}
+type SALOAD struct {base.NoOperandsInstruction}
+func checkNotNil(ref *heap.Object) {
+	if ref==nil {
+		panic("java.lang.NullPointerException")
+	}
+}
+func checkIndex(arrLen int,index int32) {
+	if index<0||index>int32(arrLen) {
+		panic("ArrayIndexOutOfBoundsException")
+	}
+}
+func (self *AALOAD) Execute(frame *runtime.Frame) {
+	stack:=frame.OperandStack()
+	index:=stack.PopInt()
+	arrRef:=stack.PopRef()
+	checkNotNil(arrRef)
+	refs:=arrRef.Refs()
+	checkIndex(len(refs),index)
+	stack.PushRef(refs[index])
+}

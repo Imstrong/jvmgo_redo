@@ -1,7 +1,7 @@
 package heap
 
 import (
-	"jvmgo/ch07/classfile"
+	"jvmgo/ch08/classfile"
 	"fmt"
 )
 

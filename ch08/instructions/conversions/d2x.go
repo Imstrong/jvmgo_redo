@@ -1,8 +1,8 @@
 package conversions
 
 import (
-	"jvmgo/ch07/instructions/base"
-	"jvmgo/ch07/runtime"
+	"jvmgo/ch08/instructions/base"
+	"jvmgo/ch08/runtime"
 )
 
 //d2x:convert double to others,把dobule类型转换成其他类型
