@@ -8,6 +8,9 @@ func (self *Object) Shorts() []int16 {
 func (self *Object) Longs() []int64 {
 	return self.data.([]int64)
 }
+func (self *Object) Chars() []int16 {
+	return self.data.([]int16)
+}
 func (self *Object) Ints() []int32 {
 	return self.data.([]int32)
 }

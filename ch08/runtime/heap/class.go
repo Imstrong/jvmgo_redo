@@ -82,16 +82,38 @@ func newObject(class *Class) *Object {
 func (self *Class) ConstantPool() *ConstantPool {
 	return self.constantPool
 }
+//是否继承或实现自某个类/接口
 func (self *Class) isAssignableFrom(other *Class) bool {
 	s, t := other, self
 	if s == t {
 		return true
 	}
-	if !t.IsInterface() {
-		return s.isSubClassOf(t)
-	} else {
-		return s.isImplements(t)
+	if !s.IsArray() {
+		if !s.IsInterface() {
+			if !t.IsInterface() {
+				return s.isSubInterfaceOf(t)
+			}
+		}else {
+			if !t.IsInterface() {
+				return t.isJlObject()
+			}else {
+				return t.isSuperInterfaceOf(s)
+			}
+		}
+	}else {
+		if !t.IsArray() {
+			if t.IsInterface() {
+				return t.isJlObject()
+			}else {
+				return t.isJlCloneable()||t.isJioSerializable()
+			}
+		}else {
+			sc:=s.ComponentClass()
+			tc:=t.ComponentClass()
+			return sc==tc||tc.isAssignableFrom(sc)
+		}
 	}
+	return false
 }
 func (self *Class) isSubClassOf(other *Class) bool {
 	for c := self.superClass; c != nil; c = c.superClass {
@@ -188,4 +210,26 @@ func (self *Class) ArrayClass() *Class {
 func (self *Class) ComponentClass() *Class {
 	componentClassName:=getComponentClassName(self.name)
 	return self.loader.LoadClass(componentClassName)
+}
+func (self *Class) isJlObject() bool {
+	return self.name=="java/lang/Object"
+}
+func (self *Class) isSuperInterfaceOf(other *Class) bool {
+	return other.isSubInterfaceOf(self)
+}
+func (self *Class) isJlCloneable() bool {
+	return self.name=="java/lang/Cloneable"
+}
+func (self *Class) isJioSerializable() bool {
+	return self.name=="java/lang/Serializable"
+}
+func (self *Class) getField(name,descriptor string,isStatic bool) *Field {
+	for c:=self;c!=nil;c=c.superClass {
+		for _,field:=range c.fields {
+			if field.IsStatic()==isStatic&&field.name==name&&field.descriptor==descriptor {
+				return field
+			}
+		}
+	}
+	return nil
 }
