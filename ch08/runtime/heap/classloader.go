@@ -1,9 +1,9 @@
 package heap
 
 import (
-	"jvmgo/ch08/classpath"
+	"jvmgo_redo/ch08/classpath"
 	"fmt"
-	"jvmgo/ch08/classfile"
+	"jvmgo_redo/ch08/classfile"
 )
 
 type ClassLoader struct {
@@ -40,13 +40,13 @@ func (self *ClassLoader) loadNonArrayClass(className string) *Class {
 	return class
 }
 func (self *ClassLoader) LoadArrayClass(name string) *Class {
-	class := &Class{
-		accessFlags: ACC_PUBLIC, // todo
-		name:        name,
-		loader:      self,
-		initStarted: true,
-		superClass:  self.LoadClass("java/lang/Object"),
-		interfaces: []*Class{
+	class:= &Class{
+		accessFlags:ACC_PUBLIC,
+		name:name,
+		loader:self,
+		initStarted:true,
+		superClass:self.LoadClass("java/lang/Object"),
+		interfaces:[]*Class{
 			self.LoadClass("java/lang/Cloneable"),
 			self.LoadClass("java/io/Serializable"),
 		},

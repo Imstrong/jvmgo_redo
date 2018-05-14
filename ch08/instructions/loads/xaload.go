@@ -1,9 +1,9 @@
 package loads
 
 import (
-	"jvmgo/ch08/instructions/base"
-	"jvmgo/ch08/runtime"
-	"jvmgo/ch08/runtime/heap"
+	"jvmgo_redo/ch08/instructions/base"
+	"jvmgo_redo/ch08/runtime"
+	"jvmgo_redo/ch08/runtime/heap"
 )
 
 type AALOAD struct {base.NoOperandsInstruction}
