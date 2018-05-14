@@ -1,9 +1,9 @@
 package heap
 
 import (
-	"jvmgo_redo/ch08/classpath"
+	"jvmgo/ch09/classpath"
 	"fmt"
-	"jvmgo_redo/ch08/classfile"
+	"jvmgo/ch09/classfile"
 )
 
 type ClassLoader struct {
@@ -12,20 +12,61 @@ type ClassLoader struct {
 	verboseFlag bool
 }
 func NewClassLoader(cp *classpath.Classpath,verboseInstFlag bool) *ClassLoader {
-	return &ClassLoader{
+	loader:= &ClassLoader{
 		classpath:cp,
 		verboseFlag:verboseInstFlag,
 		classMap:make(map[string]*Class),
 	}
+	//加载java.lang.Class类，此动作又会触发java.lang.Object类，及一干接口的加载
+	loader.loadBasicClasses()
+	loader.loadPrimitiveClasses()
+	return loader
+}
+func (self *ClassLoader) loadBasicClasses() {
+	jlClassClass:=self.LoadClass("java/lang/Class")
+	//遍历每个已加载的类，创建其Class对象，并设置extra属性为该Class对象
+	for _,class:=range self.classMap {
+		if class.jClass==nil {
+			class.jClass=jlClassClass.NewObject()
+			class.jClass.extra=class
+		}
+	}
+}
+func (self *ClassLoader) loadPrimitiveClasses() {
+	for primitiveType,_:=range primitiveTypes {
+		self.loadPrimitiveClass(primitiveType)
+	}
+}
+func (self *ClassLoader) loadPrimitiveClass(className string) {
+	class:=&Class{
+		accessFlags:ACC_PUBLIC,
+		name:className,
+		loader:self,
+		initStarted:true,
+	}
+	class.jClass=self.classMap["java/lang/Class"].NewObject()
+	class.jClass.extra=class
+	self.classMap[className]=class
 }
 func (self *ClassLoader) LoadClass(name string) *Class {
 	if class,ok:=self.classMap[name];ok{
 		return class
 	}
+	var class *Class
 	if name[0]=='[' {
-		return self.LoadArrayClass(name)
+		class= self.LoadArrayClass(name)
+	}else {
+		class = self.loadNonArrayClass(name)
 	}
-	return self.loadNonArrayClass(name)
+
+	//如果存在class类的信息（已被加载），创建Class对象，并设置为class结构体的指针
+	if jlClassClass,ok:=self.classMap["java/lang/Class"];ok{
+		//创建Class类的对象
+		class.jClass=jlClassClass.NewObject()
+		//将Class对象设置给class信息
+		class.jClass.extra=class
+	}
+	return class
 }
 func (self *ClassLoader) loadNonArrayClass(className string) *Class {
 	//类加载3步骤，一：读取

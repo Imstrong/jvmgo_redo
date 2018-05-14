@@ -1,9 +1,9 @@
 package constants
 
 import (
-	"jvmgo_redo/ch08/instructions/base"
-	"jvmgo_redo/ch08/runtime"
-	"jvmgo_redo/ch08/runtime/heap"
+	"jvmgo/ch09/instructions/base"
+	"jvmgo/ch09/runtime"
+	"jvmgo/ch09/runtime/heap"
 )
 
 //Load Constant
@@ -29,7 +29,10 @@ func _ldc(frame *runtime.Frame, index uint) {
 	case string: //在第
 		internedStr:=heap.JString(class.ClassLoader(),c.(string))
 		stack.PushRef(internedStr)
-		// case *heap.ClassRef: 在第
+	case *heap.ClassRef:
+		classRef:=c.(*heap.ClassRef)
+		classObj:=classRef.ResolvedClass().JClass()
+		stack.PushRef(classObj)
 	default:
 		panic("todo: ldc!")
 	}

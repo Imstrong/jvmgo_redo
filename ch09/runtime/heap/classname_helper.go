@@ -13,6 +13,7 @@ func toDescriptor(className string) string {
 	}
 	return "L"+className+";"
 }
+//八种基本数据类型，以及void
 var primitiveTypes=map[string]string {
 	"void":"V",
 	"boolean":"Z",
@@ -22,6 +23,7 @@ var primitiveTypes=map[string]string {
 	"long":"J",
 	"float":"F",
 	"double":"D",
+	"char":"C",
 }
 func getComponentClassName(className string) string {
 	if className[0]=='[' {

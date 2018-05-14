@@ -1,6 +1,6 @@
 package heap
 
-import "jvmgo_redo/ch08/classfile"
+import "jvmgo/ch09/classfile"
 //成员变量标识符
 type FieldRef struct {
 	MemberRef

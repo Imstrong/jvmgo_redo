@@ -2,17 +2,18 @@ package instructions
 
 import (
 	"fmt"
-	"jvmgo_redo/ch08/instructions/base"
-	. "jvmgo_redo/ch08/instructions/constants"
-	. "jvmgo_redo/ch08/instructions/loads"
-	. "jvmgo_redo/ch08/instructions/stores"
-	. "jvmgo_redo/ch08/instructions/stack"
-	. "jvmgo_redo/ch08/instructions/comparisons"
-	. "jvmgo_redo/ch08/instructions/control"
-	. "jvmgo_redo/ch08/instructions/conversions"
-	. "jvmgo_redo/ch08/instructions/extended"
-	. "jvmgo_redo/ch08/instructions/math"
-	"jvmgo_redo/ch08/instructions/references"
+	"jvmgo/ch09/instructions/base"
+	. "jvmgo/ch09/instructions/constants"
+	. "jvmgo/ch09/instructions/loads"
+	. "jvmgo/ch09/instructions/stores"
+	. "jvmgo/ch09/instructions/stack"
+	. "jvmgo/ch09/instructions/comparisons"
+	. "jvmgo/ch09/instructions/control"
+	. "jvmgo/ch09/instructions/conversions"
+	. "jvmgo/ch09/instructions/extended"
+	. "jvmgo/ch09/instructions/math"
+	"jvmgo/ch09/instructions/references"
+	"jvmgo/ch09/instructions/reserved"
 )
 
 // NoOperandsInstruction singletons
@@ -164,7 +165,7 @@ var (
 	// athrow        = &ATHROW{}
 	// monitorenter  = &MONITOR_ENTER{}
 	// monitorexit   = &MONITOR_EXIT{}
-	// invoke_native = &INVOKE_NATIVE{}
+	invoke_native = &reserved.INVOKE_NATIVE{}
 )
 
 func NewInstruction(opcode byte) base.Instruction {
@@ -574,7 +575,7 @@ func NewInstruction(opcode byte) base.Instruction {
 		// case 0xc9:
 		// 	return &JSR_W{}
 		// case 0xca: breakpoint
-		// case 0xfe: impdep1
+	case 0xfe: invoke_native
 		// case 0xff: impdep2
 	default:
 		panic(fmt.Errorf("Unsupported opcode: 0x%x!", opcode))

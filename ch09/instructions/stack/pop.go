@@ -1,8 +1,8 @@
 package stack
 
 import (
-	"jvmgo_redo/ch08/instructions/base"
-	"jvmgo_redo/ch08/runtime"
+	"jvmgo/ch09/instructions/base"
+	"jvmgo/ch09/runtime"
 )
 
 type POP struct {base.NoOperandsInstruction}

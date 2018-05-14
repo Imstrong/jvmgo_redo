@@ -1,8 +1,8 @@
 package constants
 
 import (
-	"jvmgo_redo/ch08/instructions/base"
-	"jvmgo_redo/ch08/runtime"
+	"jvmgo/ch09/instructions/base"
+	"jvmgo/ch09/runtime"
 )
 
 //常量指令,将***包含在操作吗中***的常量推入操作数栈顶

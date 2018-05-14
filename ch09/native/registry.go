@@ -9,7 +9,7 @@ func Register(className,methodName,methodDescriptor string,method NativeMethod) 
 	key:=className+"~"+methodName+"~"+methodDescriptor
 	registry[key]=method
 }
-func FindNativeMathod(className,methodName,methodDescriptor string) NativeMethod {
+func FindNativeMethod(className,methodName,methodDescriptor string) NativeMethod {
 	key:=className+"~"+methodName+"~"+methodDescriptor
 	if method,ok:=registry[key];ok{
 		return method

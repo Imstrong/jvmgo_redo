@@ -1,9 +1,8 @@
 package base
 
 import (
-	"jvmgo_redo/ch08/runtime"
-	"jvmgo_redo/ch08/runtime/heap"
-	"fmt"
+	"jvmgo/ch09/runtime"
+	"jvmgo/ch09/runtime/heap"
 )
 
 //方法执行逻辑
@@ -21,13 +20,6 @@ func InvokeMethod(invokerFrame *runtime.Frame,method *heap.Method) {
 			newFrame.LocalVars().SetSlot(uint(i),slot)
 		}
 	}
-	// hack!
-	if method.IsNative() {
-		if method.Name() == "registerNatives" {
-			thread.PopFrame()
-		} else {
-			panic(fmt.Sprintf("native method: %v.%v%v\n",
-				method.Class().Name(), method.Name(), method.Descriptor()))
-		}
-	}
+	//调用本地方法
+
 }

@@ -1,19 +1,20 @@
 package heap
 
 import (
-	"jvmgo_redo/ch08/classfile"
+	"jvmgo/ch09/classfile"
 	"strings"
 )
 
+//加载后存放在方法区的类信息，以go数据结构的形式保存，不是java对象
 type Class struct {
 	//类访问标识
-	accessFlags       uint16
-	name              string
-	superClassName    string
-	interfaceNames    []string
-	constantPool      *ConstantPool
-	fields            []*Field
-	methods           []*Method
+	accessFlags    uint16
+	name           string
+	superClassName string
+	interfaceNames []string
+	constantPool   *ConstantPool
+	fields         []*Field
+	methods        []*Method
 	//类加载器指针
 	loader            *ClassLoader
 	superClass        *Class
@@ -21,7 +22,9 @@ type Class struct {
 	instanceSlotCount uint
 	staticSlotCount   uint
 	staticVars        Slots
-	initStarted 	  bool
+	initStarted       bool
+	//Class实例
+	jClass *Object
 }
 
 func newClass(classfile *classfile.ClassFile) *Class {
@@ -62,10 +65,10 @@ func (self *Class) IsEnum() bool {
 	return 0 != self.accessFlags&ACC_ENUM
 }
 func (self *Class) isAccessibleTo(other *Class) bool {
-	return self.IsPublic()||self.getPackageName()==other.getPackageName()
+	return self.IsPublic() || self.getPackageName() == other.getPackageName()
 }
 func (self *Class) getPackageName() string {
-	if i:=strings.LastIndex(self.name,"/");i>=0 {
+	if i := strings.LastIndex(self.name, "/"); i >= 0 {
 		return self.name[:i]
 	}
 	return ""
@@ -75,8 +78,8 @@ func (self *Class) NewObject() *Object {
 }
 func newObject(class *Class) *Object {
 	return &Object{
-		class:class,
-		data:newSlots(class.instanceSlotCount),
+		class: class,
+		data:  newSlots(class.instanceSlotCount),
 	}
 }
 func (self *Class) ConstantPool() *ConstantPool {
@@ -120,11 +123,11 @@ func (self *Class) isSubInterfaceOf(iface *Class) bool {
 	return false
 }
 func (self *Class) GetMainMethod() *Method {
-	return self.getStaticMethod("main","([Ljava/lang/String;)V")
+	return self.getStaticMethod("main", "([Ljava/lang/String;)V")
 }
-func (self *Class) getStaticMethod(name,descriptor string) *Method {
-	for _,method:=range self.methods {
-		if method.IsStatic() && method.name==name && method.descriptor==descriptor {
+func (self *Class) getStaticMethod(name, descriptor string) *Method {
+	for _, method := range self.methods {
+		if method.IsStatic() && method.name == name && method.descriptor == descriptor {
 			return method
 		}
 	}
@@ -134,20 +137,20 @@ func (self *Class) StaticVars() Slots {
 	return self.staticVars
 }
 func (self *Class) IsSuperClassOf(class *Class) bool {
-	if class.superClass==self {
+	if class.superClass == self {
 		return true
 	}
 	return false
 }
 func (self *Class) GetPackageName() string {
-	if i:=strings.LastIndex(self.name,"/");i>0 {
+	if i := strings.LastIndex(self.name, "/"); i > 0 {
 		return self.name[:i]
 	}
 	return ""
 }
 func (self *Class) IsSubClassOf(class *Class) bool {
-	for c:=self.superClass;c!=nil;c=c.superClass {
-		if c==class {
+	for c := self.superClass; c != nil; c = c.superClass {
+		if c == class {
 			return true
 		}
 	}
@@ -157,9 +160,9 @@ func (self *Class) SuperClass() *Class {
 	return self.superClass
 }
 func (self *Class) IsImplements(class *Class) bool {
-	for i:=self;i!=nil;i=i.superClass {
+	for i := self; i != nil; i = i.superClass {
 		for _, iFace := range self.interfaces {
-			if iFace == class||iFace.isSubInterfaceOf(class) {
+			if iFace == class || iFace.isSubInterfaceOf(class) {
 				return true
 			}
 		}
@@ -169,23 +172,26 @@ func (self *Class) IsImplements(class *Class) bool {
 func (self *Class) Name() string {
 	return self.name
 }
-func (class *Class) InitStarted() bool{
+func (class *Class) InitStarted() bool {
 	return class.initStarted
 }
 func (class *Class) GetClinitMethod() *Method {
-	return class.getStaticMethod("<clinit>","()V")
+	return class.getStaticMethod("<clinit>", "()V")
 }
 func (self *Class) StartInit() {
-	self.initStarted=true
+	self.initStarted = true
 }
 func (self *Class) ClassLoader() *ClassLoader {
 	return self.loader
 }
 func (self *Class) ArrayClass() *Class {
-	arrayClassName:=getArrayClassName(self.name)
+	arrayClassName := getArrayClassName(self.name)
 	return self.loader.LoadClass(arrayClassName)
 }
 func (self *Class) ComponentClass() *Class {
-	componentClassName:=getComponentClassName(self.name)
+	componentClassName := getComponentClassName(self.name)
 	return self.loader.LoadClass(componentClassName)
+}
+func (self *Class) JClass() *Object {
+	return self.jClass
 }

@@ -1,6 +1,8 @@
 package heap
 
-import "jvmgo_redo/ch08/classfile"
+import (
+	"jvmgo/ch09/classfile"
+)
 
 type Method struct {
 	ClassMember
@@ -13,11 +15,11 @@ type Method struct {
 func newMethods(class *Class, methodMembers []*classfile.AttrMethodInfo) []*Method {
 	methods := make([]*Method, len(methodMembers))
 	for i, method := range methodMembers {
-		methods[i] = &Method{}
-		methods[i].class = class
-		methods[i].copyMemberInfo(method)
-		methods[i].copyAttributes(method)
-		methods[i].countArgSlotCount()
+		methods[i] = newMethod(class,method)
+		//methods[i].class = class
+		//methods[i].copyMemberInfo(method)
+		//methods[i].copyAttributes(method)
+		//methods[i].countArgSlotCount()
 	}
 	return methods
 }
@@ -52,9 +54,8 @@ func (self *Method) Name() string {
 func (self *Method) ArgSlotCount() uint {
 	return self.argSlotCount
 }
-func (self *Method) countArgSlotCount() {
-	parsedDescriptor := parseMethodDescriptor(self.descriptor)
-	for _, paramType := range parsedDescriptor.parameterTypes {
+func (self *Method) countArgSlotCount(paramTypes []string) {
+	for _, paramType := range paramTypes {
 		self.argSlotCount++
 		if paramType == "J" || paramType == "D" {
 			self.argSlotCount++
@@ -75,4 +76,34 @@ func (self *Method) IsNative() bool {
 		return true
 	}
 	return false
+}
+func newMethod(class *Class,methodAttr *classfile.AttrMethodInfo) *Method {
+	method:=&Method{}
+	method.class=class
+	method.copyMemberInfo(methodAttr)
+	method.copyAttributes(methodAttr)
+	md:=parseMethodDescriptor(method.descriptor)
+	method.countArgSlotCount(md.parameterTypes)
+	if method.IsNative() {
+		method.injectCodeAttribute(md.returnType)
+	}
+	return method
+}
+func (self *Method) injectCodeAttribute(returnType string) {
+	self.maxStack=4
+	self.maxLocals=self.argSlotCount
+	switch returnType[0] {
+	case 'V':
+		self.code=[]byte{0xfe,0xb1}
+	case 'D':
+		self.code=[]byte{0xfe,0xaf}
+	case 'F':
+		self.code=[]byte{0xfe,0xae}
+	case 'J':
+		self.code=[]byte{0xfe,0xad}
+	case 'L','[':
+		self.code=[]byte{0xfe,0xb0}
+	default:
+		self.code=[]byte{0xfe,0xac}
+	}
 }

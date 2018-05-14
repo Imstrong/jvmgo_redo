@@ -1,8 +1,8 @@
 package comparisons
 
 import (
-	"jvmgo_redo/ch08/instructions/base"
-	"jvmgo_redo/ch08/runtime"
+	"jvmgo/ch09/instructions/base"
+	"jvmgo/ch09/runtime"
 )
 //判断两个int的大小
 type IF_ICMPEQ struct {base.BranchInstruction}

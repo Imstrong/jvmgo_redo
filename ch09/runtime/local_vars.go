@@ -2,7 +2,7 @@ package runtime
 
 import (
 	"math"
-	"jvmgo_redo/ch08/runtime/heap"
+	"jvmgo/ch09/runtime/heap"
 )
 
 type LocalVars []Slot

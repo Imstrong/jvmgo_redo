@@ -1,6 +1,6 @@
 package heap
 
-import "jvmgo_redo/ch08/classfile"
+import "jvmgo/ch09/classfile"
 
 //类符号引用，继承符号引用结构
 type ClassRef struct {
