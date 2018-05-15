@@ -20,6 +20,9 @@ func (self *Object) Doubles() []float64 {
 func (self *Object) Refs() []*Object {
 	return self.data.([]*Object)
 }
+func (self *Object) Chars() []uint16 {
+	return self.data.([]uint16)
+}
 func (self *Object) ArrayLength() int32 {
 	switch self.data.(type) {
 	case []int8:return int32(len(self.data.([]int8)))
@@ -30,5 +33,42 @@ func (self *Object) ArrayLength() int32 {
 	case []float64:return int32(len(self.data.([]float64)))
 	case []*Object:return int32(len(self.data.([]*Object)))
 	default:panic("Not Array!")
+	}
+}
+func ArrayCopy(src,dest *Object,srcPos,destPos,length int32) {
+	switch src.data.(type) {
+	case []int32:
+		_src:=src.data.([]int32)[srcPos:srcPos+length]
+		_dest:=dest.data.([]int32)[destPos:destPos+length]
+		copy(_dest,_src)
+	case []int64:
+		_src:=src.data.([]int64)[srcPos:srcPos+length]
+		_dest:=dest.data.([]int64)[destPos:destPos+length]
+		copy(_dest,_src)
+	case []int16:
+		_src:=src.data.([]int64)[srcPos:srcPos+length]
+		_dest:=dest.data.([]int64)[destPos:destPos+length]
+		copy(_dest,_src)
+	case []int8:
+		_src:=src.data.([]int8)[srcPos:srcPos+length]
+		_dest:=dest.data.([]int8)[destPos:destPos+length]
+		copy(_dest,_src)
+	case []uint16:
+		_src:=src.data.([]uint16)[srcPos:srcPos+length]
+		_dest:=dest.data.([]uint16)[destPos:destPos+length]
+		copy(_dest,_src)
+	case []float32:
+		_src:=src.data.([]float32)[srcPos:srcPos+length]
+		_dest:=dest.data.([]float32)[destPos:destPos+length]
+		copy(_dest,_src)
+	case []float64:
+		_src:=src.data.([]float64)[srcPos:srcPos+length]
+		_dest:=dest.data.([]float64)[destPos:destPos+length]
+		copy(_dest,_src)
+	case []*Object:
+		_src:=src.data.([]*Object)[srcPos:srcPos+length]
+		_dest:=dest.data.([]*Object)[destPos:destPos+length]
+		//builtin方法copy，拷贝slice类型
+		copy(_dest,_src)
 	}
 }

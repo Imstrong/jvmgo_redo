@@ -195,3 +195,17 @@ func (self *Class) ComponentClass() *Class {
 func (self *Class) JClass() *Object {
 	return self.jClass
 }
+func (self *Class) IsPrimitive() bool {
+	_,ok:=primitiveTypes[self.name]//如果 存在 这个基本类型
+	return ok
+}
+func (self *Class) getField(name,descriptor string,isStatic bool) *Field {
+	for c:=self;c!=nil;c=c.superClass {
+		for _,field:=range c.fields {
+			if field.IsStatic()==isStatic&&field.name==name&&field.descriptor==descriptor {
+				return field
+			}
+		}
+	}
+	return nil
+}

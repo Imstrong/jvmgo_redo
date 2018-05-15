@@ -23,8 +23,3 @@ func (object *Object) Class() *Class {
 func (object *Object) Fields() *Slots {
 	return object.data.(*Slots)
 }
-func (object *Object) SetRefVal(name,descriptor string,ref *Object) {
-	field:=object.class.getField(name,descriptor,false)
-	slots:=object.data.(*Slots)
-	slots.SetRef(field.slotId,ref)
-}
