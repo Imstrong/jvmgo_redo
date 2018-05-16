@@ -11,6 +11,7 @@ type Method struct {
 	code         []byte
 	argSlotCount uint
 	exceptionTable ExceptionTable
+	lineNumberTable *classfile.LineNumTableAttribute
 }
 
 func newMethods(class *Class, methodMembers []*classfile.AttrMethodInfo) []*Method {
@@ -29,9 +30,20 @@ func (self *Method) copyAttributes(methodMember *classfile.AttrMethodInfo) {
 		self.maxStack = codeAttr.MaxStack()
 		self.maxLocals = codeAttr.MaxLocals()
 		self.code = codeAttr.Code()
+
+		self.lineNumberTable=codeAttr.LineNumberTableAttribute()
 		//exception table,从code属性中解析并获得异常处理表相关信息，封装成一个Exceptiontable结构体
 		self.exceptionTable=newExceptionTable(codeAttr.ExceptionTable(),self.class.constantPool)
 	}
+}
+func (self *Method) GetLineNumber(pc int) int {
+	if self.IsNative() {
+		return -2
+	}
+	if self.lineNumberTable==nil {
+		return -1
+	}
+	return self.lineNumberTable.GetLineNumber(pc)
 }
 func (self *Method) FindExceptionHandler(exClass *Class,pc int) int{
 	handler:=self.exceptionTable.findExceptionHandler(exClass,pc)

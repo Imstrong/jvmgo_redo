@@ -42,6 +42,12 @@ func newClass(classfile *classfile.ClassFile) *Class {
 	class.sourceFile=getSourceFile(classfile)
 	return class
 }
+func getSourceFile(cf *classfile.ClassFile) string {
+	if sfAttr:=cf.SourceFileAttribute();sfAttr!=nil {
+		return sfAttr.FileName()
+	}
+	return "Unknown"
+}
 
 //判断访问权限标识
 func (self *Class) IsPublic() bool {

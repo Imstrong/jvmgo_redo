@@ -26,6 +26,9 @@ func (object *Object) Class() *Class {
 func (object *Object) Extra() interface{} {
 	return object.extra
 }
+func (object *Object) SetExtra(extra interface{}) {
+	object.extra=extra
+}
 func (object *Object) SetRefVar(refName,descriptor string,refVal *Object){
 	field:=object.class.getField(refName,descriptor,false)
 	slots:=object.data.(Slots)
