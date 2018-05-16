@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 	"strings"
-	"jvmgo/ch09/classpath"
-	"jvmgo/ch09/runtime/heap"
+	"jvmgo_redo/ch09/classpath"
+	"jvmgo_redo/ch09/runtime/heap"
 )
 
 func main(){

@@ -1,8 +1,8 @@
 package base
 
 import (
-	"jvmgo/ch09/runtime"
-	"jvmgo/ch09/runtime/heap"
+	"jvmgo_redo/ch09/runtime"
+	"jvmgo_redo/ch09/runtime/heap"
 )
 
 //方法执行逻辑

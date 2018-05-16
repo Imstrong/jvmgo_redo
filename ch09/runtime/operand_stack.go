@@ -2,7 +2,7 @@ package runtime
 
 import (
 	"math"
-	"jvmgo/ch09/runtime/heap"
+	"jvmgo_redo/ch09/runtime/heap"
 )
 
 //操作数栈

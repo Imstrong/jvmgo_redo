@@ -1,7 +1,7 @@
 package heap
 
 import (
-	"jvmgo/ch09/classfile"
+	"jvmgo_redo/ch09/classfile"
 	"strings"
 )
 
@@ -204,6 +204,23 @@ func (self *Class) getField(name,descriptor string,isStatic bool) *Field {
 		for _,field:=range c.fields {
 			if field.IsStatic()==isStatic&&field.name==name&&field.descriptor==descriptor {
 				return field
+			}
+		}
+	}
+	return nil
+}
+func (self *Class) GetRefVar(name,descriptor string ) *Object {
+	field:=self.getField(name,descriptor,false)
+	return self.staticVars.GetRef(field.slotId)
+}
+func (self *Class) GetInstanceMethod(name,descriptor string) *Method {
+	return self.GetMethod(name,descriptor,false)
+}
+func (self *Class) GetMethod(name,descriptor string,isStatic bool) *Method {
+	for c:=self;c!=nil;c=c.superClass {
+		for _,method:=range c.methods {
+			if method.name==name&&method.descriptor==descriptor {
+				return method
 			}
 		}
 	}

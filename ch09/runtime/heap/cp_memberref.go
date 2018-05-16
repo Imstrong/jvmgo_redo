@@ -1,6 +1,6 @@
 package heap
 
-import "jvmgo/ch09/classfile"
+import "jvmgo_redo/ch09/classfile"
 //类成员标识符，包括成员变量和成员函数
 type MemberRef struct {
 	SymRef

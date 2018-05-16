@@ -1,8 +1,8 @@
 package constants
 
 import (
-	"jvmgo/ch09/instructions/base"
-	"jvmgo/ch09/runtime"
+	"jvmgo_redo/ch09/instructions/base"
+	"jvmgo_redo/ch09/runtime"
 )
 //ipush指令将从操作数中获取一个byte、short型的整数，扩展成int型并推入栈顶
 type BIPUSH struct {

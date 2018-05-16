@@ -1,9 +1,9 @@
 package constants
 
 import (
-	"jvmgo/ch09/instructions/base"
-	"jvmgo/ch09/runtime"
-	"jvmgo/ch09/runtime/heap"
+	"jvmgo_redo/ch09/instructions/base"
+	"jvmgo_redo/ch09/runtime"
+	"jvmgo_redo/ch09/runtime/heap"
 )
 
 //Load Constant

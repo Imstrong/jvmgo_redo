@@ -1,6 +1,6 @@
 package native
 
-import "jvmgo/ch09/runtime"
+import "jvmgo_redo/ch09/runtime"
 
 //注册本地方法
 type NativeMethod func(frame *runtime.Frame)

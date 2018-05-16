@@ -1,9 +1,9 @@
 package lang
 
 import (
-	"jvmgo/ch09/native"
-	"jvmgo/ch09/runtime"
-	"jvmgo/ch09/runtime/heap"
+	"jvmgo_redo/ch09/native"
+	"jvmgo_redo/ch09/runtime"
+	"jvmgo_redo/ch09/runtime/heap"
 )
 
 func init() {

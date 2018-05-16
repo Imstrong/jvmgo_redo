@@ -1,8 +1,8 @@
 package loads
 
 import (
-	"jvmgo/ch09/instructions/base"
-	"jvmgo/ch09/runtime"
+	"jvmgo_redo/ch09/instructions/base"
+	"jvmgo_redo/ch09/runtime"
 )
 func _dload(frame *runtime.Frame,index uint) {
 	val := frame.LocalVars().GetDouble(index)

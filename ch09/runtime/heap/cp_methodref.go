@@ -1,6 +1,6 @@
 package heap
 
-import "jvmgo/ch09/classfile"
+import "jvmgo_redo/ch09/classfile"
 //成员函数表示符
 type MethodRef struct {
 	MemberRef
